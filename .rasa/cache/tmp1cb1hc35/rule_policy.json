@@ -1,0 +1,28 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]": "utter_greetUZ",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_greetUZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]": "utter_q1UZ",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_greetUZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_q1UZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}]": "utter_greetRU",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_greetRU\"}, \"user\": {\"intent\": \"changeLangRU\"}}]": "utter_q1RU",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_greetRU\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_q1RU\"}, \"user\": {\"intent\": \"changeLangRU\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_greetRU\"}, \"user\": {\"intent\": \"changeLangRU\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_greetUZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_q1UZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_greetRU\"}, \"user\": {\"intent\": \"changeLangRU\"}}, {\"prev_action\": {\"action_name\": \"utter_q1RU\"}, \"user\": {\"intent\": \"changeLangRU\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1UZ\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangRU\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"utter_q1RU\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"changeLangUZ\"}}, {\"prev_action\": {\"action_name\": \"utter_greetUZ\"}, \"user\": {\"intent\": \"changeLangUZ\"}}]",
+      "predicting default action with intent restart"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+- story: greeting at utter_greetRU
+  steps:
+  - or:
+    - intent: langDetectRU
+    - intent: changeLangRU
+    - intent: repeat
+    - intent: soundlessly
+    - intent: operator
+    - intent: affirm
+    - intent: deny
+    - intent: howfindpoduct
+    - intent: howaddnewcard
+    - intent: whatkindofassortment
+    - intent: deliverymethods
+    - intent: validityperiodofbonuses
+    - intent: whatiscashback
+    - intent: changephonenumber
+    - intent: installmentperiod
+    - intent: pick-up points
+    - intent: installmentconditions
+    - intent: howmanybonuses
+    - intent: earlyrepayment
+    - intent: getbonusesback
+    - intent: imeicode
+    - intent: withdrewtwice
+    - intent: nonecessaryproduct
+    - intent: howtoplaceanorder
+    - intent: robot
+    - intent: howtogetalimit
+    - intent: cantloginapp
+    - intent: return
+    - intent: receivedtheproduct
+    - intent: dontreceivedtheproduct
+    - intent: initialpayment
+    - intent: cantpayontime
+    - intent: changecard
+    - intent: whenorderbedelivered
+    - intent: dontknow
+    - intent: ocalseller
+    - intent: foreignseller
+    - intent: expresselivery
+    - intent: standartdelivery
+    - intent: zoodboxdelivery
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_greetRU
+  - action: utter_q1RU
+
+- story: greeting at utter_greetUZ
+  steps:
+  - or:
+    - intent: langDetectUZ
+    - intent: changeLangUZ
+  - action: utter_greetUZ
+  - action: utter_q1UZ

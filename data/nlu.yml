@@ -1,0 +1,411 @@
+version: "3.1"
+
+nlu:
+- intent: langDetectRU
+  examples: |
+    - привет
+    - здравствуйте
+    - добрый день
+    - доброе утро
+    - добрый вечер
+    - как дела?
+    - алло
+- intent: langDetectUZ
+  examples: |
+    - salom
+    - salom alaykum
+
+- intent: changeLangRU
+  examples: |
+    - на русском
+    - русский
+    - rus tilida
+    - rus tili
+- intent: changeLangUZ
+  examples: |
+    - на узбекском
+    - узбекский
+    - o'zbek tilida
+    - o'zbek tili
+
+- intent: repeat
+  examples: |
+    - повторите
+    - takrorlang
+
+- intent: affirm
+  examples: |
+    - да
+    - хорошо
+- intent: affirmUZ
+  examples: |
+    - ha
+    - yaxshi
+
+- intent: deny
+  examples: |
+    - нет
+- intent: denyUZ
+  examples: |
+    - yo'q
+
+- intent: silence
+  examples: |
+    - [silence](silence)
+
+- intent: operator
+  examples: |
+    - оператор
+    - менеджер
+
+- intent: operatorUZ
+  examples: |
+    - operator
+    - menejer
+
+- intent: howfindpoduct
+  examples: |
+    - как найти продукт
+    - где находится продукт
+
+- intent: howfindpoductUZ
+  examples: |
+    - mahsulotni qanday topish mumkin
+    - mahsulot qayerda joylashgan
+
+- intent: howaddnewcard
+  examples: |
+    - как добавить новую карту
+    - добавление новой карты
+
+- intent: howaddnewcardUZ
+  examples: |
+    - yangi kartani qanday qo'shish mumkin
+    - yangi kartani qo'shish
+
+- intent: whatkindofassortment
+  examples: |
+    - какой у вас ассортимент
+    - что у вас в продаже
+
+- intent: whatkindofassortmentUZ
+  examples: |
+    - sizlarda qanday assortiment bor
+    - sizda nimalar bor
+
+- intent: deliverymethods
+  examples: |
+    - какие способы доставки
+    - как доставляете товар
+
+- intent: deliverymethodsUZ
+  examples: |
+    - qanday yetkazib berish usullari bor
+    - mahsulotni qanday yetkazib berasiz
+
+- intent: validityperiodofbonuses
+  examples: |
+    - какой срок действия бонусов
+    - бонусы до какого числа действуют
+
+- intent: validityperiodofbonusesUZ
+  examples: |
+    - bonuslar amal qilish muddati qancha
+    - bonuslar qachongacha amal qiladi
+
+- intent: whatiscashback
+  examples: |
+    - что такое кэшбэк
+    - как работает кэшбэк
+
+- intent: whatiscashbackUZ
+  examples: |
+    - keshbek nima
+    - keshbek qanday ishlaydi
+
+- intent: changephonenumber
+  examples: |
+    - как поменять номер телефона
+    - смена номера телефона
+
+- intent: changephonenumberUZ
+  examples: |
+    - telefon raqamini qanday o'zgartirish mumkin
+    - telefon raqamini o'zgartirish
+
+- intent: installmentperiod
+  examples: |
+    - какой срок рассрочки
+    - рассрочка на сколько месяцев
+
+- intent: installmentperiodUZ
+  examples: |
+    - muddatli to'lov muddati qancha
+    - qancha muddatga bo'lib to'lash mumkin
+
+- intent: pickuppoints
+  examples: |
+    - где находятся пункты выдачи
+    - пункты самовывоза
+
+- intent: pickuppointsUZ
+  examples: |
+    - qayerda olish mumkin
+    - olish punktlari qayerda
+
+- intent: installmentconditions
+  examples: |
+    - какие условия рассрочки
+    - на каких условиях рассрочка
+
+- intent: installmentconditionsUZ
+  examples: |
+    - muddatli to'lov shartlari qanday
+    - qanday shartlarda bo'lib to'lash mumkin
+
+- intent: howmanybonuses
+  examples: |
+    - сколько у меня бонусов
+    - Где я могу узнать сколько у меня накопилось бонусов
+
+- intent: howmanybonusesUZ
+  examples: |
+    - qancha bonusim bor
+    - Qancha bonus to'plaganimni qaerdan bilsam bo'ladi
+
+- intent: earlyrepayment
+  examples: |
+    - можно ли досрочно погасить рассрочку
+    - досрочная оплата возможна
+
+- intent: earlyrepaymentUZ
+  examples: |
+    - muddatidan oldin to'lash mumkinmi
+    - muddatli to'lovni avvalroq to'lash mumkinmi
+
+- intent: getbonusesback
+  examples: |
+    - как вернуть бонусы
+    - возврат бонусов
+
+- intent: getbonusesbackUZ
+  examples: |
+    - bonuslarni qanday qaytarish mumkin
+    - bonuslarni qaytarish
+
+- intent: imeicode
+  examples: |
+    - проблемы с IMEI код
+    - IMEI код
+
+- intent: imeicodeUZ
+  examples: |
+    - IMEI kodi bilan bog'liq muammolar
+    - IMEI kodi
+
+- intent: withdrewtwice
+  examples: |
+    - списали дважды с карты
+    - дважды сняли деньги
+
+- intent: withdrewtwiceUZ
+  examples: |
+    - ikki marta yechishdi
+    - kartadan ikki marta pul yechildi
+
+- intent: nonecessaryproduct
+  examples: |
+    - нет нужного товара
+    - нет то что я искал
+
+- intent: nonecessaryproductUZ
+  examples: |
+    - kerakli mahsulot yo'q
+    - yo'q men izlayotgan narsa
+
+- intent: howtoplaceanorder
+  examples: |
+    - как оформить заказ
+    - оформление заказа
+
+- intent: howtoplaceanorderUZ
+  examples: |
+    - buyurtmani qanday joylashtirish mumkin
+    - buyurtma berish
+
+- intent: robot
+  examples: |
+    - это робот
+    - автоответчик
+
+- intent: robotUZ
+  examples: |
+    - bu robotmi
+    - avtomatik javob
+
+- intent: howtogetalimit
+  examples: |
+    - как получить лимит
+    - лимит
+
+- intent: howtogetalimitUZ
+  examples: |
+    - limitni qanday olish mumkin
+    - limit
+
+- intent: cantloginapp
+  examples: |
+    - не могу войти в приложение
+    - проблема с входом
+
+- intent: cantloginappUZ
+  examples: |
+    - ilovaga kira olmayapman
+    - kirish muammosi
+
+- intent: return
+  examples: |
+    - как вернуть товар
+    - возврат товара
+    - бракованный товар
+
+- intent: returnUZ
+  examples: |
+    - mahsulotni qanday qaytarish mumkin
+    - mahsulotni qaytarish
+    - nuqsonli tovarlar
+
+- intent: receivedtheproduct
+  examples: |
+    - я получил товар
+    - товар получен
+
+- intent: receivedtheproductUZ
+  examples: |
+    - mahsulotni oldim
+    - mahsulot olingan
+
+- intent: dontreceivedtheproduct
+  examples: |
+    - я не получил товар
+    - товар не получен
+
+- intent: dontreceivedtheproductUZ
+  examples: |
+    - mahsulotni olganim yo'q
+    - mahsulot olinmagan
+
+- intent: initialpayment
+  examples: |
+    - первоначальный взнос есть
+    - первоначальный платеж
+
+- intent: initialpaymentUZ
+  examples: |
+    - dastlabki to'lov mavjud
+    - dastlabki to'lov
+
+- intent: cantpayontime
+  examples: |
+    - не могу оплатить вовремя
+    - можно потом оплатить
+
+- intent: cantpayontimeUZ
+  examples: |
+    - vaqtida to'lay olmayman
+    - keyin to'lashingiz mumkin
+
+- intent: changecard
+  examples: |
+    - смена пластиковой карты из-за фамилии
+    - смена карты
+
+- intent: changecardUZ
+  examples: |
+    - familiyasi tufayli plastik kartani almashtirish
+    - kartani o'zgartirish
+
+- intent: whenorderbedelivered
+  examples: |
+    - когда доставят заказ
+    - срок доставки
+
+- intent: whenorderbedeliveredUZ
+  examples: |
+    - buyurtma qachon yetkazib beriladi
+    - yetkazib berish muddati
+
+- intent: dontknow
+  examples: |
+    - не знаю
+    - затрудняюсь ответить
+
+- intent: dontknowUZ
+  examples: |
+    - bilmayman
+    - javob bera olmayman
+
+- intent: localseller
+  examples: |
+    - местный продавец
+    - покупка у местного продавца
+    - когда доставят если я купил в узбекстане
+    - узбекистан
+
+- intent: localsellerUZ
+  examples: |
+    - mahalliy sotuvchi
+    - mahalliy sotuvchidan sotib olish
+    - qachon yetkazib beriladi agar men O'zbekistonda sotib olgan bo'lsam
+    - O'zbekiston
+
+- intent: foreignseller
+  examples: |
+    - зарубежный продавец
+    - покупка у зарубежного продавца
+    - заказал из китая
+    - китай
+    - когда доставка из китая
+
+- intent: foreignsellerUZ
+  examples: |
+    - chet el sotuvchisi
+    - chet el sotuvchisidan sotib olish
+    - Xitoydan buyurtma qilingan
+    - Xitoy
+    - Xitoydan etkazib berish qachon
+
+- intent: expresselivery
+  examples: |
+    - экспресс доставка
+    - заказал через экспресс доставку
+
+- intent: expresseliveryUZ
+  examples: |
+    - ekspress yetkazib berish
+    - ekspress etkazib berish orqali buyurtma qilingan
+
+- intent: standartdelivery
+  examples: |
+    - стандартная доставка
+    - заказал через экспресс доставку
+
+- intent: standartdeliveryUZ
+  examples: |
+    - standart yetkazib berish
+    - standart etkazib berish orqali buyurtma qilingan
+
+- intent: zoodboxdelivery
+  examples: |
+    - доставка через Zoodbox
+    - Zoodbox
+
+- intent: zoodboxdeliveryUZ
+  examples: |
+    - Zoodbox orqali yetkazib berish
+    - Zoodbox
+
+- intent: out_of_scope
+  examples: |
+    - руцщшымозыс
+    - рандомные слова

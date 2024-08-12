@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-silence",
+      "2": "I-silence",
+      "3": "L-silence",
+      "4": "U-silence",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-silence": 1,
+      "I-silence": 2,
+      "L-silence": 3,
+      "U-silence": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

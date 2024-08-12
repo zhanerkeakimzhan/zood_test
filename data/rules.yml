@@ -1,0 +1,2523 @@
+version: "3.1"
+
+rules:
+
+# q1
+
+# -----
+- rule: utter_q1RU change lang to UZ
+  steps:
+    - action: utter_q1RU
+    - intent: changeLangUZ
+    - action: utter_greetUZ
+    - action: utter_q1UZ
+
+- rule: utter_q1UZ change lang to RU
+  steps:
+    - action: utter_q1UZ
+    - intent: changeLangRU
+    - action: utter_greetRU
+    - action: utter_q1RU
+
+# -----
+- rule: q1 repeat RU
+  steps:
+  - action: utter_q1RU
+  - intent: repeat
+  - action: action_repeat
+
+- rule: q1 repeat UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: repeat
+  - action: action_repeat
+
+# -----
+- rule: q1 operator RU
+  steps:
+  - action: utter_q1RU
+  - intent: operator
+  - action: utter_operatorRU
+
+- rule: q1 operator RU
+  steps:
+  - action: utter_q1RU
+  - intent: operatorUZ
+  - action: utter_operatorUZ
+
+- rule: q1 operator UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: operator
+  - action: utter_operatorRU
+
+- rule: q1 operator UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: operatorUZ
+  - action: utter_operatorUZ
+
+# -----
+- rule: q1 findpoduct RU
+  steps:
+  - action: utter_q1RU
+  - intent: howfindpoduct
+  - action: utter_findpoductRU
+  - action: utter_q5RU
+
+- rule: q1 findpoduct RU
+  steps:
+  - action: utter_q1RU
+  - intent: howfindpoductUZ
+  - action: utter_findpoductUZ
+  - action: utter_q5UZ
+
+- rule: q1 findpoduct UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howfindpoduct
+  - action: utter_findpoductRU
+  - action: utter_q5RU
+
+- rule: q1 findpoduct UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howfindpoductUZ
+  - action: utter_findpoductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1 howaddnewcard RU
+  steps:
+  - action: utter_q1RU
+  - intent: howaddnewcard
+  - action: utter_addnewcardRU
+  - action: utter_q5RU
+
+- rule: q1 howaddnewcard RU
+  steps:
+  - action: utter_q1RU
+  - intent: howaddnewcardUZ
+  - action: utter_addnewcardUZ
+  - action: utter_q5UZ
+
+- rule: q1 howaddnewcard UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howaddnewcard
+  - action: utter_addnewcardRU
+  - action: utter_q5RU
+
+- rule: q1 howaddnewcard UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howaddnewcardUZ
+  - action: utter_addnewcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU whatkindofassortment answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: whatkindofassortment
+  - action: utter_assortmentRU
+  - action: utter_q5RU
+
+- rule: q1-RU whatkindofassortment answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: whatkindofassortmentUZ
+  - action: utter_assortmentUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ whatkindofassortment answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: whatkindofassortment
+  - action: utter_assortmentRU
+  - action: utter_q5RU
+
+- rule: q1-UZ whatkindofassortment answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: whatkindofassortmentUZ
+  - action: utter_assortmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU deliverymethods answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: deliverymethods
+  - action: utter_deliverymethodsRU
+  - action: utter_q5RU
+
+- rule: q1-RU deliverymethods answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: deliverymethodsUZ
+  - action: utter_deliverymethodsUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ deliverymethods answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: deliverymethods
+  - action: utter_deliverymethodsRU
+  - action: utter_q5RU
+
+- rule: q1-UZ deliverymethods answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: deliverymethodsUZ
+  - action: utter_deliverymethodsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU validityperiodofbonuses answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: validityperiodofbonuses
+  - action: utter_periodbonusesRU
+  - action: utter_q5RU
+
+- rule: q1-RU validityperiodofbonuses answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: validityperiodofbonusesUZ
+  - action: utter_periodbonusesUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ validityperiodofbonuses answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: validityperiodofbonuses
+  - action: utter_periodbonusesRU
+  - action: utter_q5RU
+
+- rule: q1-UZ validityperiodofbonuses answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: validityperiodofbonusesUZ
+  - action: utter_periodbonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU whatiscashback answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: whatiscashback
+  - action: utter_whatiscashbackRU
+  - action: utter_q5RU
+
+- rule: q1-RU whatiscashback answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: whatiscashbackUZ
+  - action: utter_whatiscashbackUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ whatiscashback answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: whatiscashback
+  - action: utter_whatiscashbackRU
+  - action: utter_q5RU
+
+- rule: q1-UZ whatiscashback answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: whatiscashbackUZ
+  - action: utter_whatiscashbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU changephonenumber answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: changephonenumber
+  - action: utter_changephonenumberRU
+  - action: utter_q5RU
+
+- rule: q1-RU changephonenumber answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: changephonenumberUZ
+  - action: utter_changephonenumberUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ changephonenumber answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: changephonenumber
+  - action: utter_changephonenumberRU
+  - action: utter_q5RU
+
+- rule: q1-UZ changephonenumber answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: changephonenumberUZ
+  - action: utter_changephonenumberUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU installmentperiod answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: installmentperiod
+  - action: utter_howlonginstallmentRU
+  - action: utter_q5RU
+
+- rule: q1-RU installmentperiod answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: installmentperiodUZ
+  - action: utter_howlonginstallmentUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ installmentperiod answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: installmentperiod
+  - action: utter_howlonginstallmentRU
+  - action: utter_q5RU
+
+- rule: q1-UZ installmentperiod answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: installmentperiodUZ
+  - action: utter_howlonginstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU pickuppoints answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: pickuppoints
+  - action: utter_pickuppointsRU
+  - action: utter_q5RU
+
+- rule: q1-RU pickuppoints answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: pickuppointsUZ
+  - action: utter_pickuppointsUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ pickuppoints answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: pickuppoints
+  - action: utter_pickuppointsRU
+  - action: utter_q5RU
+
+- rule: q1-UZ pickuppoints answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: pickuppointsUZ
+  - action: utter_pickuppointsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU installmentconditions answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: installmentconditions
+  - action: utter_conditionsforinstallmentRU
+  - action: utter_q5RU
+
+- rule: q1-RU installmentconditions answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: installmentconditionsUZ
+  - action: utter_conditionsforinstallmentUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ installmentconditions answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: installmentconditions
+  - action: utter_conditionsforinstallmentRU
+  - action: utter_q5RU
+
+- rule: q1-UZ installmentconditions answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: installmentconditionsUZ
+  - action: utter_conditionsforinstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU howmanybonuses answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: howmanybonuses
+  - action: utter_howmanybonusesRU
+  - action: utter_q5RU
+
+- rule: q1-RU howmanybonuses answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: howmanybonusesUZ
+  - action: utter_howmanybonusesUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ howmanybonuses answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: howmanybonuses
+  - action: utter_howmanybonusesRU
+  - action: utter_q5RU
+
+- rule: q1-UZ howmanybonuses answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howmanybonusesUZ
+  - action: utter_howmanybonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU earlyrepayment answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: earlyrepayment
+  - action: utter_earlyrepaymentRU
+  - action: utter_q5RU
+
+- rule: q1-RU earlyrepayment answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: earlyrepaymentUZ
+  - action: utter_earlyrepaymentUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ earlyrepayment answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: earlyrepayment
+  - action: utter_earlyrepaymentRU
+  - action: utter_q5RU
+
+- rule: q1-UZ earlyrepayment answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: earlyrepaymentUZ
+  - action: utter_earlyrepaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU getbonusesback answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: getbonusesback
+  - action: utter_getbonusesbackRU
+  - action: utter_q5RU
+
+- rule: q1-RU getbonusesback answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: getbonusesbackUZ
+  - action: utter_getbonusesbackUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ getbonusesback answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: getbonusesback
+  - action: utter_getbonusesbackRU
+  - action: utter_q5RU
+
+- rule: q1-UZ getbonusesback answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: getbonusesbackUZ
+  - action: utter_getbonusesbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU imeicode answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: imeicode
+  - action: utter_imeicodeRU
+  - action: utter_q5RU
+
+- rule: q1-RU imeicode answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: imeicodeUZ
+  - action: utter_imeicodeUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ imeicode answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: imeicode
+  - action: utter_imeicodeRU
+  - action: utter_q5RU
+
+- rule: q1-UZ imeicode answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: imeicodeUZ
+  - action: utter_imeicodeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU withdrewtwice answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: withdrewtwice
+  - action: utter_withdrawntwiceRU
+  - action: utter_q5RU
+
+- rule: q1-RU withdrewtwice answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: withdrewtwiceUZ
+  - action: utter_withdrawntwiceUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ withdrewtwice answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: withdrewtwice
+  - action: utter_withdrawntwiceRU
+  - action: utter_q5RU
+
+- rule: q1-UZ withdrewtwice answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: withdrewtwiceUZ
+  - action: utter_withdrawntwiceUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU nonecessaryproduct answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: nonecessaryproduct
+  - action: utter_nonecessaryproductRU
+  - action: utter_q5RU
+
+- rule: q1-RU nonecessaryproduct answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: nonecessaryproductUZ
+  - action: utter_nonecessaryproductUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ nonecessaryproduct answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: nonecessaryproduct
+  - action: utter_nonecessaryproductRU
+  - action: utter_q5RU
+
+- rule: q1-UZ nonecessaryproduct answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: nonecessaryproductUZ
+  - action: utter_nonecessaryproductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU howtoplaceanorder answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: howtoplaceanorder
+  - action: utter_placeanorderRU
+  - action: utter_q5RU
+
+- rule: q1-RU howtoplaceanorder answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: howtoplaceanorderUZ
+  - action: utter_placeanorderUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ howtoplaceanorder answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: howtoplaceanorder
+  - action: utter_placeanorderRU
+  - action: utter_q5RU
+
+- rule: q1-UZ howtoplaceanorder answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howtoplaceanorderUZ
+  - action: utter_placeanorderUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU robot answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: robot
+  - action: utter_robotRU
+  - action: utter_q5RU
+
+- rule: q1-RU robot answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: robotUZ
+  - action: utter_robotUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ robot answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: robot
+  - action: utter_robotRU
+  - action: utter_q5RU
+
+- rule: q1-UZ robot answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: robotUZ
+  - action: utter_robotUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU howtogetalimit answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: howtogetalimit
+  - action: utter_getalimitRU
+  - action: utter_q5RU
+
+- rule: q1-RU howtogetalimit answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: howtogetalimitUZ
+  - action: utter_getalimitUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ howtogetalimit answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: howtogetalimit
+  - action: utter_getalimitRU
+  - action: utter_q5RU
+
+- rule: q1-UZ howtogetalimit answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: howtogetalimitUZ
+  - action: utter_getalimitUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU cantloginapp answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: cantloginapp
+  - action: utter_cantlogininappRU
+  - action: utter_q5RU
+
+- rule: q1-RU cantloginapp answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: cantloginappUZ
+  - action: utter_cantlogininappUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ cantloginapp answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: cantloginapp
+  - action: utter_cantlogininappRU
+  - action: utter_q5RU
+
+- rule: q1-UZ cantloginapp answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: cantloginappUZ
+  - action: utter_cantlogininappUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU initialpayment answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: initialpayment
+  - action: utter_initialpaymentRU
+  - action: utter_q5RU
+
+- rule: q1-RU initialpayment answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: initialpaymentUZ
+  - action: utter_initialpaymentUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ initialpayment answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: initialpayment
+  - action: utter_initialpaymentRU
+  - action: utter_q5RU
+
+- rule: q1-UZ initialpayment answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: initialpaymentUZ
+  - action: utter_initialpaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU cantpayontime answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: cantpayontime
+  - action: utter_cantpayontimeRU
+  - action: utter_q5RU
+
+- rule: q1-RU cantpayontime answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: cantpayontimeUZ
+  - action: utter_cantpayontimeUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ cantpayontime answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: cantpayontime
+  - action: utter_cantpayontimeRU
+  - action: utter_q5RU
+
+- rule: q1-UZ cantpayontime answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: cantpayontimeUZ
+  - action: utter_cantpayontimeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU changecard answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: changecard
+  - action: utter_changingcardRU
+  - action: utter_q5RU
+
+- rule: q1-RU changecard answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: changecardUZ
+  - action: utter_changingcardUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ changecard answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: changecard
+  - action: utter_changingcardRU
+  - action: utter_q5RU
+
+- rule: q1-UZ changecard answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: changecardUZ
+  - action: utter_changingcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU return answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: return
+  - action: utter_q2RU
+
+- rule: q1-RU return answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: returnUZ
+  - action: utter_q2UZ
+
+- rule: q1-UZ return answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: return
+  - action: utter_q2RU
+
+- rule: q1-UZ return answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: returnUZ
+  - action: utter_q2UZ
+
+# -----
+- rule: q1-RU soundlessly
+  steps:
+  - action: utter_q1RU
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyRU
+
+- rule: q1-UZ soundlessly
+  steps:
+  - action: utter_q1UZ
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyUZ
+
+# -----
+- rule: q1-RU silence answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: silence
+  - action: utter_silenceRU
+
+- rule: q1-UZ silence answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: silence
+  - action: utter_silenceUZ
+
+# q2
+- rule: q2-RU receivedtheproduct
+  steps:
+  - action: utter_q2RU
+  - or:
+    - intent: receivedtheproduct
+    - intent: receivedtheproductUZ
+  - action: utter_receivedtheproductRU
+  - action: utter_q5RU
+
+- rule: q2-UZ receivedtheproduct
+  steps:
+  - action: utter_q2UZ
+  - or:
+    - intent: receivedtheproduct
+    - intent: receivedtheproductUZ
+  - action: utter_receivedtheproductUZ
+  - action: utter_q5UZ
+
+
+# q2
+- rule: q2-RU dontreceivedtheproduct
+  steps:
+  - action: utter_q2RU
+  - or:
+    - intent: dontreceivedtheproduct
+    - intent: dontreceivedtheproductUZ
+  - action: utter_dontreceivedtheproductRU
+  - action: utter_q5RU
+
+- rule: q2-UZ dontreceivedtheproduct
+  steps:
+  - action: utter_q2UZ
+  - or:
+    - intent: dontreceivedtheproduct
+    - intent: dontreceivedtheproductUZ
+  - action: utter_dontreceivedtheproductUZ
+  - action: utter_q5UZ
+
+
+# -----
+- rule: q1-RU whenorderbedelivered answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: whenorderbedelivered
+  - action: utter_q3RU
+
+- rule: q1-RU whenorderbedelivered answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: whenorderbedeliveredUZ
+  - action: utter_q3UZ
+
+- rule: q1-UZ whenorderbedelivered answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: whenorderbedelivered
+  - action: utter_q3RU
+
+- rule: q1-UZ whenorderbedelivered answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: whenorderbedeliveredUZ
+  - action: utter_q3UZ
+
+# -----
+- rule: q1-RU foreignseller answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: foreignseller
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: q1-RU foreignseller answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+- rule: q1-UZ foreignseller answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: foreignseller
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: q1-UZ foreignseller answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q1-RU localseller answer-RU
+  steps:
+  - action: utter_q1RU
+  - intent: localseller
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: q1-RU localseller answer-UZ
+  steps:
+  - action: utter_q1RU
+  - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ
+
+- rule: q1-UZ localseller answer-RU
+  steps:
+  - action: utter_q1UZ
+  - intent: localseller
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: q1-UZ localseller answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ
+
+
+# q3
+- rule: q3-RU dontknow
+  steps:
+  - action: utter_q3RU
+  - or:
+    - intent: dontknow
+    - intent: dontknowUZ
+  - action: utter_dontknowsellerRU
+  - action: utter_q5RU
+
+- rule: q3-UZ dontknow
+  steps:
+  - action: utter_q3UZ
+  - or:
+    - intent: dontknow
+    - intent: dontknowUZ
+  - action: utter_dontknowsellerRU
+  - action: utter_q5UZ
+
+
+# q3
+- rule: q3-RU foreignseller
+  steps:
+  - action: utter_q3RU
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: q3-UZ foreignseller
+  steps:
+  - action: utter_q3UZ
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+
+# q3
+- rule: q3-RU localseller
+  steps:
+  - action: utter_q3RU
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: q3-UZ localseller
+  steps:
+  - action: utter_q3UZ
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ
+
+
+# q4
+- rule: q4-RU dontknow
+  steps:
+  - action: utter_q4RU
+  - or:
+    - intent: dontknow
+    - intent: dontknowUZ
+  - action: utter_dontknowdeliveryRU
+  - action: utter_q5RU
+
+- rule: q4-UZ dontknow
+  steps:
+  - action: utter_q4UZ
+  - or:
+    - intent: dontknow
+    - intent: dontknowUZ
+  - action: utter_dontknowdeliveryUZ
+  - action: utter_q5UZ
+
+
+# q4
+- rule: q4-RU expresselivery
+  steps:
+  - action: utter_q4RU
+  - or:
+    - intent: expresselivery
+    - intent: expresseliveryUZ
+  - action: utter_expressdeliveryRU
+  - action: utter_q5RU
+
+- rule: q4-UZ expresselivery
+  steps:
+  - action: utter_q4UZ
+  - or:
+    - intent: expresselivery
+    - intent: expresseliveryUZ
+  - action: utter_expressdeliveryUZ
+  - action: utter_q5UZ
+
+
+# q4
+- rule: q4-RU standartdelivery
+  steps:
+  - action: utter_q4RU
+  - or:
+    - intent: standartdelivery
+    - intent: standartdeliveryUZ
+  - action: utter_standartseliveryRU
+  - action: utter_q5RU
+
+- rule: q4-UZ standartdelivery
+  steps:
+  - action: utter_q4UZ
+  - or:
+    - intent: standartdelivery
+    - intent: standartdeliveryUZ
+  - action: utter_standartseliveryRU
+  - action: utter_q5UZ
+
+
+# q4
+- rule: q4-RU zoodboxdelivery
+  steps:
+  - action: utter_q4RU
+  - or:
+    - intent: zoodboxdelivery
+    - intent: zoodboxdeliveryUZ
+  - action: utter_zoodboxdeliveryRU
+  - action: utter_q5RU
+
+- rule: q4-UZ zoodboxdelivery
+  steps:
+  - action: utter_q4UZ
+  - or:
+    - intent: zoodboxdelivery
+    - intent: zoodboxdeliveryUZ
+  - action: utter_zoodboxdeliveryUZ
+  - action: utter_q5UZ
+
+
+#operator
+- rule: dont need operator RU
+  steps:
+  - action: utter_operatorRU
+  - or:
+    - intent: affirm
+    - intent: affirmUZ
+  - action: utter_q1RU
+
+- rule: dont need operator UZ
+  steps:
+  - action: utter_operatorUZ
+  - or:
+    - intent: affirm
+    - intent: affirmUZ
+  - action: utter_q1UZ
+
+
+#operator
+- rule: need operator RU
+  steps:
+  - action: utter_operatorRU
+  - or:
+    - intent: deny
+    - intent: denyUZ
+    - intent: operator
+    - intent: operatorUZ
+  - action: utter_operator2RU
+  - action: action_restart_robot
+
+- rule: need operator UZ
+  steps:
+  - action: utter_operatorUZ
+  - or:
+    - intent: deny
+    - intent: denyUZ
+    - intent: operator
+    - intent: operatorUZ
+  - action: utter_operator2UZ
+  - action: action_restart_robot
+
+
+# silence
+# -----
+- rule: utter_silenceRU change lang to UZ
+  steps:
+    - action: utter_silenceRU
+    - intent: changeLangUZ
+    - action: utter_silenceUZ
+
+- rule: utter_silenceUZ change lang to RU
+  steps:
+    - action: utter_silenceUZ
+    - intent: changeLangRU
+    - action: utter_silenceRU
+
+# -----
+- rule: silence repeat RU
+  steps:
+  - action: utter_silenceRU
+  - intent: repeat
+  - action: action_repeat
+
+- rule: silence repeat UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: repeat
+  - action: action_repeat
+
+# -----
+- rule: silence operator RU
+  steps:
+  - action: utter_silenceRU
+  - intent: operator
+  - action: utter_operatorRU
+
+- rule: silence operator UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: operatorUZ
+  - action: utter_operatorUZ
+
+# -----
+- rule: silence findpoduct RU
+  steps:
+  - action: utter_silenceRU
+  - intent: howfindpoduct
+  - action: utter_findpoductRU
+  - action: utter_q5RU
+
+- rule: silence findpoduct UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: howfindpoductUZ
+  - action: utter_findpoductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU howaddnewcard
+  steps:
+  - action: utter_silenceRU
+  - intent: howaddnewcard
+  - action: utter_addnewcardRU
+  - action: utter_q5RU
+
+- rule: silence-UZ howaddnewcard
+  steps:
+  - action: utter_silenceUZ
+  - intent: howaddnewcardUZ
+  - action: utter_addnewcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU whatkindofassortment answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: whatkindofassortment
+  - action: utter_assortmentRU
+  - action: utter_q5RU
+
+- rule: silence-UZ whatkindofassortment answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: whatkindofassortmentUZ
+  - action: utter_assortmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU deliverymethods answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: deliverymethods
+  - action: utter_deliverymethodsRU
+  - action: utter_q5RU
+
+- rule: silence-UZ deliverymethods answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: deliverymethodsUZ
+  - action: utter_deliverymethodsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU validityperiodofbonuses answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: validityperiodofbonuses
+  - action: utter_periodbonusesRU
+  - action: utter_q5RU
+
+- rule: silence-UZ validityperiodofbonuses answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: validityperiodofbonusesUZ
+  - action: utter_periodbonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU whatiscashback answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: whatiscashback
+  - action: utter_whatiscashbackRU
+  - action: utter_q5RU
+
+- rule: silence-UZ whatiscashback answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: whatiscashbackUZ
+  - action: utter_whatiscashbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU changephonenumber answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: changephonenumber
+  - action: utter_changephonenumberRU
+  - action: utter_q5RU
+
+- rule: silence-UZ changephonenumber answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: changephonenumberUZ
+  - action: utter_changephonenumberUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU installmentperiod answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: installmentperiod
+  - action: utter_howlonginstallmentRU
+  - action: utter_q5RU
+
+- rule: silence-UZ installmentperiod answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: installmentperiodUZ
+  - action: utter_howlonginstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU pickuppoints answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: pickuppoints
+  - action: utter_pickuppointsRU
+  - action: utter_q5RU
+
+- rule: silence-UZ pickuppoints answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: pickuppointsUZ
+  - action: utter_pickuppointsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU installmentconditions answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: installmentconditions
+  - action: utter_conditionsforinstallmentRU
+  - action: utter_q5RU
+
+- rule: silence-UZ installmentconditions answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: installmentconditionsUZ
+  - action: utter_conditionsforinstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU howmanybonuses answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: howmanybonuses
+  - action: utter_howmanybonusesRU
+  - action: utter_q5RU
+
+- rule: silence-UZ howmanybonuses answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: howmanybonusesUZ
+  - action: utter_howmanybonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU earlyrepayment answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: earlyrepayment
+  - action: utter_earlyrepaymentRU
+  - action: utter_q5RU
+
+- rule: silence-UZ earlyrepayment answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: earlyrepaymentUZ
+  - action: utter_earlyrepaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU getbonusesback answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: getbonusesback
+  - action: utter_getbonusesbackRU
+  - action: utter_q5RU
+
+- rule: silence-UZ getbonusesback answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: getbonusesbackUZ
+  - action: utter_getbonusesbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU imeicode answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: imeicode
+  - action: utter_imeicodeRU
+  - action: utter_q5RU
+
+- rule: silence-UZ imeicode answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: imeicodeUZ
+  - action: utter_imeicodeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU withdrewtwice answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: withdrewtwice
+  - action: utter_withdrawntwiceRU
+  - action: utter_q5RU
+
+- rule: silence-UZ withdrewtwice answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: withdrewtwiceUZ
+  - action: utter_withdrawntwiceUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU nonecessaryproduct answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: nonecessaryproduct
+  - action: utter_nonecessaryproductRU
+  - action: utter_q5RU
+
+- rule: silence-UZ nonecessaryproduct answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: nonecessaryproductUZ
+  - action: utter_nonecessaryproductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU howtoplaceanorder answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: howtoplaceanorder
+  - action: utter_placeanorderRU
+  - action: utter_q5RU
+
+- rule: silence-UZ howtoplaceanorder answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: howtoplaceanorderUZ
+  - action: utter_placeanorderUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU robot answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: robot
+  - action: utter_robotRU
+  - action: utter_q5RU
+
+- rule: silence-UZ robot answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: robotUZ
+  - action: utter_robotUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU howtogetalimit answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: howtogetalimit
+  - action: utter_getalimitRU
+  - action: utter_q5RU
+
+- rule: silence-UZ howtogetalimit answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: howtogetalimitUZ
+  - action: utter_getalimitUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU cantloginapp answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: cantloginapp
+  - action: utter_cantlogininappRU
+  - action: utter_q5RU
+
+- rule: silence-UZ cantloginapp answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: cantloginappUZ
+  - action: utter_cantlogininappUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU initialpayment answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: initialpayment
+  - action: utter_initialpaymentRU
+  - action: utter_q5RU
+
+- rule: silence-UZ initialpayment answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: initialpaymentUZ
+  - action: utter_initialpaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU cantpayontime answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: cantpayontime
+  - action: utter_cantpayontimeRU
+  - action: utter_q5RU
+
+- rule: silence-UZ cantpayontime answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: cantpayontimeUZ
+  - action: utter_cantpayontimeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU changecard answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: changecard
+  - action: utter_changingcardRU
+  - action: utter_q5RU
+
+- rule: silence-UZ changecard answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: changecardUZ
+  - action: utter_changingcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU return answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: return
+  - action: utter_q2RU
+
+- rule: silence-UZ return answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: returnUZ
+  - action: utter_q2UZ
+
+# -----
+- rule: silence-RU soundlessly answer-RU
+  steps:
+  - action: utter_silenceRU
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyRU
+
+- rule: silence-UZ soundlessly answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyUZ
+
+# -----
+- rule: silence-RU silence answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: silence
+  - action: utter_silence2RU
+  - action: action_restart_robot
+
+- rule: silence-UZ silence answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: silence
+  - action: utter_silence2UZ
+  - action: action_restart_robot
+
+# -----
+- rule: silence-RU whenorderbedelivered answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: whenorderbedelivered
+  - action: utter_q3RU
+
+- rule: silence-UZ whenorderbedelivered answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: whenorderbedeliveredUZ
+  - action: utter_q3UZ
+
+# -----
+- rule: silence-RU foreignseller answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: foreignseller
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: silence-UZ foreignseller answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: silence-RU localseller answer-RU
+  steps:
+  - action: utter_silenceRU
+  - intent: localseller
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: silence-UZ localseller answer-UZ
+  steps:
+  - action: utter_silenceUZ
+  - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ
+
+
+# q5
+# -----
+- rule: q5-RU change lang to UZ
+  steps:
+    - action: utter_q5RU
+    - intent: changeLangUZ
+    - action: utter_q5UZ
+
+- rule: q5-UZ change lang to RU
+  steps:
+    - action: utter_q5UZ
+    - intent: changeLangRU
+    - action: utter_q5RU
+
+# -----
+- rule: q5 repeat RU
+  steps:
+  - action: utter_q5RU
+  - intent: repeat
+  - action: action_repeat
+
+- rule: q5 repeat UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: repeat
+  - action: action_repeat
+
+# -----
+- rule: q5 operator RU
+  steps:
+  - action: utter_q5RU
+  - intent: operator
+  - action: utter_operator2RU
+  - action: action_restart_robot
+
+- rule: q5 operator UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: operatorUZ
+  - action: utter_operator2UZ
+  - action: action_restart_robot
+
+# -----
+- rule: q5 findpoduct RU
+  steps:
+  - action: utter_q5RU
+  - intent: howfindpoduct
+  - action: utter_findpoductRU
+  - action: utter_q5RU
+
+- rule: q5 findpoduct UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: howfindpoductUZ
+  - action: utter_findpoductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU howaddnewcard
+  steps:
+  - action: utter_q5RU
+  - intent: howaddnewcard
+  - action: utter_addnewcardRU
+  - action: utter_q5RU
+
+- rule: q5-UZ howaddnewcard
+  steps:
+  - action: utter_q5UZ
+  - intent: howaddnewcardUZ
+  - action: utter_addnewcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU whatkindofassortment answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: whatkindofassortment
+  - action: utter_assortmentRU
+  - action: utter_q5RU
+
+- rule: q5-UZ whatkindofassortment answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: whatkindofassortmentUZ
+  - action: utter_assortmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU deliverymethods answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: deliverymethods
+  - action: utter_deliverymethodsRU
+  - action: utter_q5RU
+
+- rule: q5-UZ deliverymethods answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: deliverymethodsUZ
+  - action: utter_deliverymethodsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU validityperiodofbonuses answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: validityperiodofbonuses
+  - action: utter_periodbonusesRU
+  - action: utter_q5RU
+
+- rule: q5-UZ validityperiodofbonuses answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: validityperiodofbonusesUZ
+  - action: utter_periodbonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU whatiscashback answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: whatiscashback
+  - action: utter_whatiscashbackRU
+  - action: utter_q5RU
+
+- rule: q5-UZ whatiscashback answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: whatiscashbackUZ
+  - action: utter_whatiscashbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU changephonenumber answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: changephonenumber
+  - action: utter_changephonenumberRU
+  - action: utter_q5RU
+
+- rule: q5-UZ changephonenumber answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: changephonenumberUZ
+  - action: utter_changephonenumberUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU installmentperiod answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: installmentperiod
+  - action: utter_howlonginstallmentRU
+  - action: utter_q5RU
+
+- rule: q5-UZ installmentperiod answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: installmentperiodUZ
+  - action: utter_howlonginstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU pickuppoints answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: pickuppoints
+  - action: utter_pickuppointsRU
+  - action: utter_q5RU
+
+- rule: q5-UZ pickuppoints answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: pickuppointsUZ
+  - action: utter_pickuppointsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU installmentconditions answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: installmentconditions
+  - action: utter_conditionsforinstallmentRU
+  - action: utter_q5RU
+
+- rule: q5-UZ installmentconditions answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: installmentconditionsUZ
+  - action: utter_conditionsforinstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU howmanybonuses answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: howmanybonuses
+  - action: utter_howmanybonusesRU
+  - action: utter_q5RU
+
+- rule: q5-UZ howmanybonuses answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: howmanybonusesUZ
+  - action: utter_howmanybonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU earlyrepayment answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: earlyrepayment
+  - action: utter_earlyrepaymentRU
+  - action: utter_q5RU
+
+- rule: q5-UZ earlyrepayment answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: earlyrepaymentUZ
+  - action: utter_earlyrepaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU getbonusesback answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: getbonusesback
+  - action: utter_getbonusesbackRU
+  - action: utter_q5RU
+
+- rule: q5-UZ getbonusesback answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: getbonusesbackUZ
+  - action: utter_getbonusesbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU imeicode answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: imeicode
+  - action: utter_imeicodeRU
+  - action: utter_q5RU
+
+- rule: q5-UZ imeicode answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: imeicodeUZ
+  - action: utter_imeicodeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU withdrewtwice answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: withdrewtwice
+  - action: utter_withdrawntwiceRU
+  - action: utter_q5RU
+
+- rule: q5-UZ withdrewtwice answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: withdrewtwiceUZ
+  - action: utter_withdrawntwiceUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU nonecessaryproduct answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: nonecessaryproduct
+  - action: utter_nonecessaryproductRU
+  - action: utter_q5RU
+
+- rule: q5-UZ nonecessaryproduct answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: nonecessaryproductUZ
+  - action: utter_nonecessaryproductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU howtoplaceanorder answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: howtoplaceanorder
+  - action: utter_placeanorderRU
+  - action: utter_q5RU
+
+- rule: q5-UZ howtoplaceanorder answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: howtoplaceanorderUZ
+  - action: utter_placeanorderUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU robot answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: robot
+  - action: utter_robotRU
+  - action: utter_q5RU
+
+- rule: q5-UZ robot answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: robotUZ
+  - action: utter_robotUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU howtogetalimit answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: howtogetalimit
+  - action: utter_getalimitRU
+  - action: utter_q5RU
+
+- rule: q5-UZ howtogetalimit answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: howtogetalimitUZ
+  - action: utter_getalimitUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU cantloginapp answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: cantloginapp
+  - action: utter_cantlogininappRU
+  - action: utter_q5RU
+
+- rule: q5-UZ cantloginapp answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: cantloginappUZ
+  - action: utter_cantlogininappUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU initialpayment answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: initialpayment
+  - action: utter_initialpaymentRU
+  - action: utter_q5RU
+
+- rule: q5-UZ initialpayment answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: initialpaymentUZ
+  - action: utter_initialpaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU cantpayontime answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: cantpayontime
+  - action: utter_cantpayontimeRU
+  - action: utter_q5RU
+
+- rule: q5-UZ cantpayontime answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: cantpayontimeUZ
+  - action: utter_cantpayontimeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU changecard answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: changecard
+  - action: utter_changingcardRU
+  - action: utter_q5RU
+
+- rule: q5-UZ changecard answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: changecardUZ
+  - action: utter_changingcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU return answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: return
+  - action: utter_q2RU
+
+- rule: q5-UZ return answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: returnUZ
+  - action: utter_q2UZ
+
+# -----
+- rule: q5-RU soundlessly answer-RU
+  steps:
+  - action: utter_q5RU
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyRU
+
+- rule: q5-UZ soundlessly answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_soundlesslyUZ
+
+# -----
+- rule: q5-RU silence answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: silence
+  - action: utter_silenceRU
+
+- rule: q5-UZ silence answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: silence
+  - action: utter_silenceUZ
+
+# -----
+- rule: q5-RU whenorderbedelivered answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: whenorderbedelivered
+  - action: utter_q3RU
+
+- rule: q5-UZ whenorderbedelivered answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: whenorderbedeliveredUZ
+  - action: utter_q3UZ
+
+# -----
+- rule: q5-RU foreignseller answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: foreignseller
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: q5-UZ foreignseller answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: q5-RU localseller answer-RU
+  steps:
+  - action: utter_q5RU
+  - intent: localseller
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: q5-UZ localseller answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ
+
+# -----
+- rule: q5 deny RU
+  steps:
+  - action: utter_q5RU
+  - intent: deny
+  - action: utter_denyRU
+  - action: action_restart_robot
+
+- rule: q5 deny UZ
+  steps:
+  - action: utter_q5UZ
+  - intent: denyUZ
+  - action: utter_denyUZ
+  - action: action_restart_robot
+
+# soundlessly
+# -----
+- rule: soundlessly-RU change lang to UZ
+  steps:
+    - action: utter_soundlesslyRU
+    - intent: changeLangUZ
+    - action: utter_q5UZ
+
+- rule: soundlessly-UZ change lang to RU
+  steps:
+    - action: utter_soundlesslyUZ
+    - intent: changeLangRU
+    - action: utter_soundlesslyRU
+
+# -----
+- rule: soundlessly repeat RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: repeat
+  - action: action_repeat
+
+- rule: soundlessly repeat UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: repeat
+  - action: action_repeat
+
+# -----
+- rule: soundlessly operator RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: operator
+  - action: utter_operator2RU
+  - action: action_restart_robot
+
+- rule: soundlessly operator UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: operatorUZ
+  - action: utter_operator2UZ
+  - action: action_restart_robot
+
+# -----
+- rule: soundlessly findpoduct RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: howfindpoduct
+  - action: utter_findpoductRU
+  - action: utter_q5RU
+
+- rule: soundlessly findpoduct UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: howfindpoductUZ
+  - action: utter_findpoductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU howaddnewcard
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: howaddnewcard
+  - action: utter_addnewcardRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ howaddnewcard
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: howaddnewcardUZ
+  - action: utter_addnewcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU whatkindofassortment answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: whatkindofassortment
+  - action: utter_assortmentRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ whatkindofassortment answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: whatkindofassortmentUZ
+  - action: utter_assortmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU deliverymethods answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: deliverymethods
+  - action: utter_deliverymethodsRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ deliverymethods answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: deliverymethodsUZ
+  - action: utter_deliverymethodsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU validityperiodofbonuses answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: validityperiodofbonuses
+  - action: utter_periodbonusesRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ validityperiodofbonuses answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: validityperiodofbonusesUZ
+  - action: utter_periodbonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU whatiscashback answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: whatiscashback
+  - action: utter_whatiscashbackRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ whatiscashback answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: whatiscashbackUZ
+  - action: utter_whatiscashbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU changephonenumber answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: changephonenumber
+  - action: utter_changephonenumberRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ changephonenumber answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: changephonenumberUZ
+  - action: utter_changephonenumberUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU installmentperiod answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: installmentperiod
+  - action: utter_howlonginstallmentRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ installmentperiod answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: installmentperiodUZ
+  - action: utter_howlonginstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU pickuppoints answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: pickuppoints
+  - action: utter_pickuppointsRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ pickuppoints answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: pickuppointsUZ
+  - action: utter_pickuppointsUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU installmentconditions answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: installmentconditions
+  - action: utter_conditionsforinstallmentRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ installmentconditions answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: installmentconditionsUZ
+  - action: utter_conditionsforinstallmentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU howmanybonuses answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: howmanybonuses
+  - action: utter_howmanybonusesRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ howmanybonuses answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: howmanybonusesUZ
+  - action: utter_howmanybonusesUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU earlyrepayment answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: earlyrepayment
+  - action: utter_earlyrepaymentRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ earlyrepayment answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: earlyrepaymentUZ
+  - action: utter_earlyrepaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU getbonusesback answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: getbonusesback
+  - action: utter_getbonusesbackRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ getbonusesback answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: getbonusesbackUZ
+  - action: utter_getbonusesbackUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU imeicode answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: imeicode
+  - action: utter_imeicodeRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ imeicode answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: imeicodeUZ
+  - action: utter_imeicodeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU withdrewtwice answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: withdrewtwice
+  - action: utter_withdrawntwiceRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ withdrewtwice answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: withdrewtwiceUZ
+  - action: utter_withdrawntwiceUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU nonecessaryproduct answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: nonecessaryproduct
+  - action: utter_nonecessaryproductRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ nonecessaryproduct answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: nonecessaryproductUZ
+  - action: utter_nonecessaryproductUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU howtoplaceanorder answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: howtoplaceanorder
+  - action: utter_placeanorderRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ howtoplaceanorder answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: howtoplaceanorderUZ
+  - action: utter_placeanorderUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU robot answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: robot
+  - action: utter_robotRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ robot answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: robotUZ
+  - action: utter_robotUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU howtogetalimit answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: howtogetalimit
+  - action: utter_getalimitRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ howtogetalimit answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: howtogetalimitUZ
+  - action: utter_getalimitUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU cantloginapp answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: cantloginapp
+  - action: utter_cantlogininappRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ cantloginapp answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: cantloginappUZ
+  - action: utter_cantlogininappUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU initialpayment answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: initialpayment
+  - action: utter_initialpaymentRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ initialpayment answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: initialpaymentUZ
+  - action: utter_initialpaymentUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU cantpayontime answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: cantpayontime
+  - action: utter_cantpayontimeRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ cantpayontime answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: cantpayontimeUZ
+  - action: utter_cantpayontimeUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU changecard answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: changecard
+  - action: utter_changingcardRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ changecard answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: changecardUZ
+  - action: utter_changingcardUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU return answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: return
+  - action: utter_q2RU
+
+- rule: soundlessly-UZ return answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: returnUZ
+  - action: utter_q2UZ
+
+# -----
+- rule: soundlessly-RU soundlessly answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_denyRU
+  - action: action_restart_robot
+
+- rule: soundlessly-UZ soundlessly answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - or:
+    - intent: out_of_scope
+    - intent: nlu_fallback
+  - action: utter_denyUZ
+  - action: action_restart_robot
+
+# -----
+- rule: soundlessly-RU silence answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: silence
+  - action: utter_silenceRU
+
+- rule: soundlessly-UZ silence answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: silence
+  - action: utter_silenceUZ
+
+# -----
+- rule: soundlessly-RU whenorderbedelivered answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: whenorderbedelivered
+  - action: utter_q3RU
+
+- rule: soundlessly-UZ whenorderbedelivered answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: whenorderbedeliveredUZ
+  - action: utter_q3UZ
+
+# -----
+- rule: soundlessly-RU foreignseller answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: foreignseller
+  - action: utter_foreignsellerRU
+  - action: utter_q5RU
+
+- rule: soundlessly-UZ foreignseller answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: foreignsellerUZ
+  - action: utter_foreignsellerUZ
+  - action: utter_q5UZ
+
+# -----
+- rule: soundlessly-RU localseller answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - intent: localseller
+  - action: utter_localsellerRU
+  - action: utter_q4RU
+
+- rule: soundlessly-UZ localseller answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - intent: localsellerUZ
+  - action: utter_localsellerUZ
+  - action: utter_q4UZ

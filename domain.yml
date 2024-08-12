@@ -1,0 +1,325 @@
+version: "3.1"
+
+intents:
+  - langDetectRU
+  - langDetectUZ
+  - changeLangRU
+  - changeLangUZ
+  - repeat
+  - soundlessly
+  - operator
+  - affirm
+  - deny
+  - howfindpoduct
+  - howaddnewcard
+  - whatkindofassortment
+  - deliverymethods
+  - validityperiodofbonuses
+  - whatiscashback
+  - changephonenumber
+  - installmentperiod
+  - pickuppoints
+  - installmentconditions
+  - howmanybonuses
+  - earlyrepayment
+  - getbonusesback
+  - imeicode
+  - withdrewtwice
+  - nonecessaryproduct
+  - howtoplaceanorder
+  - robot
+  - howtogetalimit
+  - cantloginapp
+  - return
+  - receivedtheproduct
+  - dontreceivedtheproduct
+  - initialpayment
+  - cantpayontime
+  - changecard
+  - whenorderbedelivered
+  - dontknow
+  - localseller
+  - foreignseller
+  - expresselivery
+  - standartdelivery
+  - zoodboxdelivery
+  - soundlesslyUZ
+  - operatorUZ
+  - affirmUZ
+  - denyUZ
+  - howfindpoductUZ
+  - howaddnewcardUZ
+  - whatkindofassortmentUZ
+  - deliverymethodsUZ
+  - validityperiodofbonusesUZ
+  - whatiscashbackUZ
+  - changephonenumberUZ
+  - installmentperiodUZ
+  - pickuppointsUZ
+  - installmentconditionsUZ
+  - howmanybonusesUZ
+  - earlyrepaymentUZ
+  - getbonusesbackUZ
+  - imeicodeUZ
+  - withdrewtwiceUZ
+  - nonecessaryproductUZ
+  - howtoplaceanorderUZ
+  - robotUZ
+  - howtogetalimitUZ
+  - cantloginappUZ
+  - returnUZ
+  - receivedtheproductUZ
+  - dontreceivedtheproductUZ
+  - initialpaymentUZ
+  - cantpayontimeUZ
+  - changecardUZ
+  - whenorderbedeliveredUZ
+  - dontknowUZ
+  - localsellerUZ
+  - foreignsellerUZ
+  - expresseliveryUZ
+  - standartdeliveryUZ
+  - zoodboxdeliveryUZ
+  - out_of_scope
+  - nlu_fallback
+
+responses:
+  utter_greetRU:
+  - text: 0.0 | Здравствуйте, вы позвонили в компанию Zoodmall, меня зовут Шахло
+  utter_greetUZ:
+  - text: 1.0 | Assalomu aleykum, Siz Zoodmallga qo'ng'iroq qildingiz, mening ismim Shahlo
+
+  utter_q1RU:
+  - text: 2.0 | Слушаю вас? Чем я могу Вам помочь?
+  - text: 2.1 | Чем я могу быть полезным?
+  - text: 2.2 | На какие вопросы я могу ответить?
+  utter_q1UZ:
+  - text: 3.0 | Eshitaman sizni? Sizga qanday yordam bera olaman?
+  - text: 3.1 | Qanday qilib foydali bo'lishim mumkin?
+  - text: 3.2 | Qanday savollarga javob bera olaman?
+
+  utter_operatorRU:
+  - text: 4.0 | Поняла вас, но перед тем как соединить с оператором, может я смогу вам помочь?
+  utter_operatorUZ:
+  - text: 5.0 | Men sizni tushundim, lekin operator bilan bog'lanishdan oldin, ehtimol sizga yordam bera olamanmi? UZ
+
+  utter_operator2RU:
+  - text: 6.0 | Понял(а), сейчас соединю вас со специалистом оператором занимающимся этим вопросом, пожалуйста оставайтесь на линии
+  utter_operator2UZ:
+  - text: 7.0 | Men tushundim, endi men sizni ushbu masala bilan shug'ullanadigan mutaxassis operator bilan bog'layman, iltimos, chiziqda qoling
+
+  utter_silenceRU:
+  - text: 8.0 | Извините, вы на линии?
+  - text: 8.1 | Говорите, я Вас слушаю
+  utter_silenceUZ:
+  - text: 9.0 | Kechirasiz, siz chiziqdasizmi?
+  - text: 9.1 | Gapiring, men sizni tinglayman
+
+  utter_findpoductRU:
+  - text: 10.0 | Чтобы найти товар который вас интересует откройте приложение ZOOD и воспользуйтесь кнопкой поисковика или вы можете перейти в категории и найди нужный товар.
+  utter_findpoductUZ:
+  - text: 11.0 | Sizni qiziqtirgan mahsulotni topish uchun ZOOD ilovasini oching va qidiruv tizimining tugmasidan foydalaning yoki siz toifalarga o'tishingiz va kerakli mahsulotni topishingiz mumkin.
+
+  utter_addnewcardRU:
+  - text: 12.0 | Чтобы добавить новую карту, откройте приложение и перейдите в раздел Аккаунт. Затем выберите Календарь платежей и найдите пункт Реквизиты карты. Нажмите на значок ручки, чтобы ввести данные новой карты и сохраните изменения. 
+  utter_addnewcardUZ:
+  - text: 13.0 | Yangi kartani qo'shish uchun ilovani oching va hisob qaydnomasiga o'ting. Keyin to'lov taqvimini tanlang va elementni toping karta tafsilotlari. Yangi xarita ma'lumotlarini kiritish va o'zgarishlarni saqlash uchun qalam belgisini bosing.
+
+  utter_assortmentRU:
+  - text: 14.0 | У нас очень разнообразный ассортимент товаров. Например, Вы можете приобрести телефоны и гаджеты, технику для дома, товары для детей, спортивные товары и многое другое. Посмотреть их и заказать вы можете в приложении ZOOD
+  utter_assortmentUZ:
+  - text: 15.0 | Bizda juda xilma-xil mahsulotlar assortimenti mavjud. Masalan, siz telefonlar va gadjetlar, uy jihozlari, bolalar uchun mahsulotlar, sport buyumlari va boshqalarni sotib olishingiz mumkin. Siz ularni ZOOD ilovasida ko'rishingiz va buyurtma qilishingiz mumkin
+
+  utter_deliverymethodsRU:
+  - text: 16.0 | У нас есть два варианта доставки курьерская доставка и самовывоз из пункта выдачи заказов. Детали доставки будут указаны при оформлении товара.
+  utter_deliverymethodsUZ:
+  - text: 17.0 | Bizda etkazib berishning ikkita varianti mavjud kuryer orqali etkazib berish va buyurtma berish joyidan olib ketish. Yetkazib berish tafsilotlari mahsulotni ro'yxatdan o'tkazishda ko'rsatiladi.
+  
+  utter_periodbonusesRU:
+  - text: 18.0 | Срок бонусов после активации 3 месяца. После истечение срока бонусы сгорают.
+  utter_periodbonusesUZ:
+  - text: 19.0 | Faollashtirilgandan keyin bonuslar muddati 3 oy. Muddati tugaganidan keyin bonuslar yonib ketadi.
+
+  utter_whatiscashbackRU:
+  - text: 20.0 | Кэшбэк это бонус который можно использовать на следующие покупки. Бонусом можно оплатить до 30% от суммы товара. Обращаю внимание, что Кэшбэк начисляется только за товары которые были куплены в рассрочку на 6 и 12 месяцев.
+  utter_whatiscashbackUZ:
+  - text: 21.0 | Cashback a bonus keyingi xaridlarda foydalanish mumkin. Bonus mahsulot miqdorining 30 foizigacha to'lashi mumkin. Shuni esda tutingki, naqd pul faqat 6 va 12 oy davomida bo'lib-bo'lib sotib olingan tovarlar uchun olinadi.
+
+  utter_changephonenumberRU:
+  - text: 22.0 | Смотрите, сначала заходите в раздел Аккаунт, далее в настройки аккаунта и там снизу возле вашего текущего номера телефона будет кнопка изменить, нажимаете на нее.
+  utter_changephonenumberUZ:
+  - text: 23.0 | Qarang, avval hisob bo'limiga o'ting, so'ngra hisob sozlamalariga o'ting va pastki qismida joriy telefon raqamingiz yonida o'zgartirish tugmasi bo'ladi, ustiga bosing.
+
+  utter_howlonginstallmentRU:
+  - text: 24.0 | У нас Вы можете купить нужные товары по выгодной цене в рассрочку на 4, 6 и 12 месяцев.
+  utter_howlonginstallmentUZ:
+  - text: 25.0 | Biz bilan siz 4, 6 va 12 oylik qismlarga bo'lib, kerakli mahsulotlarni arzon narxlarda sotib olishingiz mumkin.
+
+  utter_pickuppointsRU:
+  - text: 26.0 | Смотрите, Пункты выдачи заказов вы можете посмотреть при оформлении заказа, когда будете выбирать метод доставки. 
+  utter_pickuppointsUZ:
+  - text: 27.0 | Qarang, etkazib berish usulini tanlaganingizda, buyurtma berish paytida buyurtma berish punktlarini ko'rishingiz mumkin.
+
+  utter_conditionsforinstallmentRU:
+  - text: 28.0 | Аха, давайте расскажу, первым делом вы должны быть старше 18 лет. Банковская карта Узкард или Хумо. У вас должен быть действующий номер телефона привязанный к вашей карте. Также банковская карта должна быть действительной последние 3 месяца. Еще у вас не должно быть открытых долгов и вы должны иметь хорошую кредитную историю.
+  utter_conditionsforinstallmentUZ:
+  - text: 29.0 | Aha, sizga aytaman, birinchi navbatda siz 18 yoshdan katta bo'lishingiz kerak. O'zkard yoki Humo bank kartasi. Sizda bo'lishi kerak haqiqiy telefon raqami kartangizga bog'langan. Shuningdek, bank kartasi oxirgi 3 oy davomida amal qilishi kerak. Shuningdek, sizda ochiq qarzlar bo'lmasligi va yaxshi kredit tarixiga ega bo'lishingiz kerak.
+
+  utter_howmanybonusesRU:
+  - text: 30.0 | Заходите в приложение Зудмол и нажимаете кнопку Аккаунт, после перехода у вас будет кнопка кэшбэк, нажмите на нее. Там вся информация о доступных и ожидающих бонусов.
+  utter_howmanybonusesUZ:
+  - text: 31.0 | Zoodmol dasturiga o'ting va hisob tugmachasini bosing, o'tgandan so'ng sizda Cashback tugmasi bo'ladi, ustiga bosing. Mavjud va kutilayotgan bonuslar haqida barcha ma'lumotlar mavjud.
+
+  utter_earlyrepaymentRU:
+  - text: 32.0 | Конечно, оплатить досрочно можно в приложении. Для этого зайдите в раздел "Аккаунт", затем выберите "Календарь рассрочки" и нажмите "Оплатить". Всё готово!
+  utter_earlyrepaymentUZ:
+  - text: 33.0 | Albatta, siz ilovada muddatidan oldin to'lashingiz mumkin. Buning uchun "hisob" bo'limiga o'ting, so'ng "bo'lib-bo'lib to'lash taqvimi" ni tanlang va "to'lash"tugmasini bosing. Hammasi tayyor!
+
+  utter_getbonusesbackRU:
+  - text: 34.0 | Да, как только ваш возврат будет подтверждён, то деньги вам вернуться. Также вернутся ваши бонусы в полном объеме
+  utter_getbonusesbackUZ:
+  - text: 35.0 | Ha, sizning qaytishingiz tasdiqlangandan so'ng, pul sizga qaytib keladi. Sizning bonuslaringiz ham to'liq qaytariladi
+
+  utter_imeicodeRU:
+  - text: 36.0 | Смотрите, если вы получите SMS с уведомлением о том, что ваш IMEI не зарегистрирован то не беспокойтесь. Все телефоны находятся в очереди и будут автоматически зарегистрированы в течение одного месяца. Вам не нужно предпринимать никаких дополнительных действий!
+  utter_imeicodeUZ:
+  - text: 37.0 | Qarang, agar siz IMEI ro'yxatdan o'tmaganligi to'g'risida SMS-xabar olsangiz, tashvishlanmang. Barcha telefonlar navbatda turadi va bir oy ichida avtomatik ravishda ro'yxatdan o'tkaziladi. Siz qo'shimcha choralar ko'rishingiz shart emas!
+
+  utter_withdrawntwiceRU:
+  - text: 38.0 | Мхм, поняла вас, в таком случае, пожалуйста обратитесь в чат поддержи приложения Зуд И отправьте скриншот снятия, там уже выяснят почему два раза сняли у вас деньги.
+  utter_withdrawntwiceUZ:
+  - text: 39.0 | MHM, men sizni tushundim, bu holda, iltimos, qichishish dasturini qo'llab-quvvatlash suhbatiga murojaat qiling va olib tashlashning skrinshotini yuboring, ular nima uchun sizdan ikki marta pul olganliklarini allaqachon bilib olishadi.
+
+  utter_nonecessaryproductRU:
+  - text: 40.0 | Я Вас поняла, мы ежедневно пополняем ассортимент, возможно нужный Вам товар скоро появится, а пока я предлагаю посмотреть другие товары, и купить что-то для себя или своих близких.
+  utter_nonecessaryproductUZ:
+  - text: 41.0 | Men sizni tushundim, biz har kuni assortimentni to'ldiramiz, ehtimol sizga kerak bo'lgan mahsulot tez orada paydo bo'ladi, ammo hozircha men boshqa mahsulotlarni ko'rib chiqishni va o'zingiz yoki yaqinlaringiz uchun biror narsa sotib olishni taklif qilaman.
+
+  utter_placeanorderRU:
+  - text: 42.0 | Аха, давайте расскажу, вам надо сначала выбрать понравившиеся товар, далее на странице товара нажать кнопку заказать сейчас, после выбираете цвет и количество товара, затем нажимаете оформить заказ, выбираете способ доставки и способ оплаты и в конце нажимаете кнопку подтвердить.
+  utter_placeanorderUZ:
+  - text: 43.0 | Aha, sizga aytaylikki, avval o'zingiz yoqtirgan mahsulotni tanlashingiz kerak, so'ngra mahsulot sahifasida tugmani bosing hozir buyurtma bering, keyin mahsulotning rangi va miqdorini tanlang, so'ng bosing buyurtma berish, etkazib berish usuli va to'lov usulini tanlang va oxirida tugmani bosing tasdiqlash.
+
+  utter_robotRU:
+  - text: 44.0 | Меня зовут Шахло и Я являюсь виртуальным ассистентом маркетплейса Zoodmall . Вы можете задать мне вопрос, я постараюсь Вам помочь.
+  utter_robotUZ:
+  - text: 45.0 | Mening ismim Shahlo va men zoodmall Marketplace-ning virtual yordamchisiman . Siz menga savol berishingiz mumkin, men sizga yordam berishga harakat qilaman.
+
+  utter_getalimitRU:
+  - text: 46.0 | Смотрите, чтобы активировать лимит в Зудмол, перейдите в раздел Зудпэй. Там будет кнопка Активировать лимит. После нажатия на нее, вас попросят пройти проверку личности. Для этого подготовьте паспорт или id Карту и данные пластиковой карты. После этого дождитесь результатов проверки.
+  utter_getalimitUZ:
+  - text: 47.0 | Zoodmol limitini faollashtirish uchun qarang, Zoodpei bo'limiga o'ting. Cheklovni faollashtirish tugmasi bo'ladi. Uni bosgandan so'ng, sizdan shaxsingizni tekshirish so'raladi. Buning uchun pasport yoki id karta va plastik karta ma'lumotlarini tayyorlang. Shundan so'ng, tekshirish natijalarini kuting.
+
+  utter_cantlogininappRU:
+  - text: 48.0 | Аха, в таком случае я советую обновить приложение  Zood до последней версии В магазинах Appstore И Googleplay.  После этих шагов, все должно заработать.
+  utter_cantlogininappUZ:
+  - text: 49.0 | Aha, bu holda men sizga Appstore va Googleplay do'konlarida Zood ilovasini so'nggi versiyasiga yangilashni maslahat beraman.  Ushbu qadamlardan keyin hamma narsa ishlashi kerak.
+
+  utter_initialpaymentRU:
+  - text: 50.0 | Смотрите, в рассрочке на 12 месяцев первоначального взноса нет, но в других случаях, Например на 4 или же на 6 месяцев есть первоначальный взнос.
+  utter_initialpaymentUZ:
+  - text: 51.0 | Qarang, 12 oylik bo'lib-bo'lib to'lash uchun dastlabki to'lov yo'q, lekin boshqa hollarda, masalan 4 yoki 6 oy uchun dastlabki to'lov mavjud.
+
+  utter_cantpayontimeRU:
+  - text: 52.0 | Поняла вас. В случае если вы не можете оплатить платеж в назначенный день, то Вам нужно зайти в приложение и написать в онлайн чат поддержки. Они смогут продлить день вашей оплаты на 3 дня.
+  utter_cantpayontimeUZ:
+  - text: 53.0 | Sizni tushundim. Agar siz belgilangan kunda to'lovni to'lay olmasangiz, unda siz dasturga o'tishingiz va onlayn qo'llab-quvvatlash suhbatiga yozishingiz kerak. Ular sizning to'lov kuningizni 3 kunga uzaytirishi mumkin.
+
+  utter_changingcardRU:
+  - text: 54.0 | Я вас поняла, Если вы зарегистрировались с фамилией мужа, а на пластиковой карте ваша девичья фамилия. Вам надо будет обратится в ваш банк и перевыпустить карту с обновленной информацией. После этого  привязать новую карту с вашей новой фамилией.
+  utter_changingcardUZ:
+  - text: 55.0 | Agar siz eringizning familiyasi bilan ro'yxatdan o'tgan bo'lsangiz va plastik kartada qizlik familiyangiz bo'lsa, men sizni tushundim. Siz bankingizga murojaat qilishingiz va yangilangan ma'lumotlar bilan kartani qayta chiqarishingiz kerak bo'ladi. Shundan so'ng, yangi familiyangiz bilan yangi kartani bog'lang.
+
+  utter_q2RU:
+  - text: 56.0 | Так, давайте сперва уточним вы получили товар или нет?
+  utter_q2UZ:
+  - text: 57.0 | Shunday qilib, keling, avval mahsulotni oldingizmi yoki yo'qmi?
+
+  utter_receivedtheproductRU:
+  - text: 58.0 | Поняла, давайте объясню вам как подать заявку на возврат. Для начало в приложении ZOOD откройте раздел Заказы, найдите нужный заказ, откройте его и внизу нажмите Подать на возврат. Укажите причину возврата и приложите фото или видео и отправьте заявку. Затем мои коллеги проверят вашу заявку и обязательно помогут вам.
+  utter_receivedtheproductUZ:
+  - text: 59.0 | Tushundim, sizga qanday qilib qaytarib olish uchun murojaat qilishni tushuntirib beraylik. Uchun boshlash hayvonot bog'i ilovasida bo'limni oching buyurtmalar, kerakli buyurtmani toping, uni oching va pastki qismida bosing qaytish uchun ariza bering. Qaytish sababini ko'rsating va fotosurat yoki videoni ilova qiling va ariza yuboring. Keyin mening hamkasblarim sizning arizangizni ko'rib chiqadilar va sizga albatta yordam berishadi.
+
+  utter_dontreceivedtheproductRU:
+  - text: 60.0 | Понятно, смотрите если после оформления заказа не прошло более 1 часа вы можете отменить его в самом приложении. Вам нужно перейти в раздел Заказы в приложении и внутри заказа будет кнопка отменить. Но если ваш заказ уже отправили на обработку то отменить его не получится
+  utter_dontreceivedtheproductUZ:
+  - text: 61.0 | Aniq, qarang agar to'lovdan keyin 1 soatdan ko'proq vaqt o'tmagan bo'lsa, uni ilovaning o'zida bekor qilishingiz mumkin. Siz bo'limga o'tishingiz kerak buyurtmalar ilovada va buyurtma ichida tugma bo'ladi bekor qilish. Ammo agar sizning buyurtmangiz allaqachon qayta ishlashga yuborilgan bo'lsa, uni bekor qilish ishlamaydi
+
+  utter_q3RU:
+  - text: 62.0 | Уточните, пожалуйста, вы заказали от местного продавца или зарубежного?
+  utter_q3UZ:
+  - text: 63.0 | Iltimos, mahalliy sotuvchidan yoki chet eldan buyurtma berganingizni tekshiring?
+
+  utter_dontknowsellerRU:
+  - text: 64.0 | Поняла вас. Давайте я расскажу про условия доставки. Если вы заказываете от местного продавца, доставка обычно занимает от 3 до 5 дней, максимум до 7 дней. Если же вы заказываете от зарубежного продавца, то время доставки может составить от 15 до 25 дней. Также нужно учесть, что суббота и воскресенье не являются рабочими днями.
+  utter_dontknowsellerUZ:
+  - text: 65.0 | Sizni tushundim. Keling, etkazib berish shartlari haqida gaplashaylik. Agar siz mahalliy sotuvchidan buyurtma bersangiz, etkazib berish odatda 3 dan 5 kungacha, maksimal 7 kungacha davom etadi. Agar siz xorijiy sotuvchidan buyurtma qilsangiz, etkazib berish muddati 15 dan 25 kungacha bo'lishi mumkin. Shuni ham hisobga olish kerakki, shanba va yakshanba ish kunlari emas.
+
+  utter_foreignsellerRU:
+  - text: 66.0 | Если заказывать с Китая, то время доставки от 25 до 40 дней. Имейте ввиду что суббота и воскресенье  не рабочие дни.
+  utter_foreignsellerUZ:
+  - text: 67.0 | Agar Xitoydan buyurtma qilingan bo'lsa, etkazib berish muddati 25 dan 40 kungacha. Shuni yodda tutingki, shanba va yakshanba kunlari ishlamaydigan kunlar.
+
+  utter_localsellerRU:
+  - text: 68.0 | Хорошо, смотрите при оформлении у местного продавца есть несколько методов доставки. Стандартный, Экспресс и до Зудбокса.
+  utter_localsellerUZ:
+  - text: 69.0 | OK, ro'yxatdan o'tish paytida qarang mahalliy sotuvchida bir nechta etkazib berish usullari mavjud. Standart, Ekspress va Zoodbox-ga qadar.
+
+  utter_q4RU:
+  - text: 70.0 | Какую из них вы выбирали?
+  utter_q4UZ:
+  - text: 71.0 | Qaysi birini tanladingiz?
+
+  utter_dontknowdeliveryRU:
+  - text: 72.0 | Поняла вас. Давайте я расскажу про сроки доставки. Доставка от местного продавца обычно занимает от 3 до 5 дней, максимум до 7 дней.
+  utter_dontknowdeliveryUZ:
+  - text: 73.0 | Sizni tushundim. Keling, etkazib berish muddati haqida gaplashaylik. Mahalliy sotuvchidan etkazib berish odatda 3 dan 5 kungacha, maksimal 7 kungacha davom etadi.
+
+  utter_expressdeliveryRU:
+  - text: 74.0 | Если вы выбрали экспресс доставку, то ваш заказ будет доставлен в течение четырёх часов с момента оформления заказа.
+  utter_expressdeliveryUZ:
+  - text: 75.0 | Agar siz Ekspress yetkazib berishni tanlagan bo'lsangiz, buyurtmangiz to'lovdan keyin to'rt soat ichida yetkazib beriladi.
+
+  utter_standartseliveryRU:
+  - text: 76.0 | Если вы выбрали стандартную доставку, то ваш заказ будет доставлен в течение трёх-пяти или максимум семи рабочих дней. Имейте ввиду что суббота и воскресенье не рабочие дни.
+  utter_standartseliveryUZ:
+  - text: 77.0 | Agar siz standart yetkazib berishni tanlagan bo'lsangiz, buyurtmangiz uch-besh yoki maksimal etti ish kuni ichida yetkazib beriladi. Shuni yodda tutingki, shanba va yakshanba kunlari ishlamaydigan kunlar.
+
+  utter_zoodboxdeliveryRU:
+  - text: 78.0 | Если вы выбрали доставку до зудбокса, то ваш заказ будет доставлен в течение трёх-пяти или максимум семи рабочих дней. Как только ваш заказ будет доставлен до зудбокса, Вы получите смс уведомление. После этого в течение трёх дней вам необходимо прибыть к зудбоксу, ввести код и забрать заказ.
+  utter_zoodboxdeliveryUZ:
+  - text: 79.0 | Agar siz zoodbox-ga etkazib berishni tanlagan bo'lsangiz, buyurtmangiz uch-besh yoki maksimal etti ish kuni ichida etkazib beriladi. Buyurtmangiz zoodbox-ga etkazib berilgandan so'ng, siz SMS-xabar olasiz. Shundan so'ng, uch kun ichida siz zoodbox-ga etib borishingiz, kodni kiritishingiz va buyurtmani olishingiz kerak.
+
+  utter_soundlesslyRU:
+  - text: 80.0 | Извините, повторите, пожалуйста, Вас плохо слышно
+  - text: 80.1 | Извините, не расслышала Вас, повторите, пожалуйста.
+  utter_soundlesslyUZ:
+  - text: 81.0 | Kechirasiz, takrorlang, iltimos, eshitmaysiz
+  - text: 81.1 | Kechirasiz, sizni eshitmadim, takrorlang, iltimos.
+
+  utter_q5RU:
+  - text: 82.0 | подскажите могу ли я еще чем-нибудь помочь?
+  - text: 82.1 | остались ли у вас еще вопросы?
+  - text: 82.2 | нужно ли вам что-то еще подсказать?
+  - text: 82.3 | есть ли у вас еще вопросы?
+  - text: 82.4 | Чем-то еще могу Вам помочь?
+  utter_q5UZ:
+  - text: 83.0 | ayting-chi, menga yordam beradigan boshqa narsa bormi?
+  - text: 83.1 | sizda hali ham savollar bormi?
+  - text: 83.2 | sizga boshqa narsa kerakmi?
+  - text: 83.3 | sizda boshqa savollar bormi?
+  - text: 83.4 | boshqa narsa sizga yordam bera oladimi?
+
+  utter_denyRU:
+  - text: 84.0 | Спасибо за обращение, всего вам Доброго, до свидания.
+  utter_denyUZ:
+  - text: 85.0 | Murojaat qilganingiz uchun tashakkur, hammasi yaxshi, xayr.
+
+  utter_silence2RU:
+  - text: 86.0 | Спасибо за ваш звонок! К сожалению, из-за технических неполадок я не смогла вас расслышать. По всем вопросам можете обратиться в чат поддержки приложения Zood. До свидания!
+  utter_silence2UZ:
+  - text: 87.0 | Qo'ng'iroq qilganingiz uchun tashakkur! Afsuski, texnik muammolar tufayli men sizni eshita olmadim. Barcha savollar uchun Zood ilovasini qo'llab-quvvatlash chatiga murojaat qilishingiz mumkin. Xayr!
+
+actions:
+  - action_restart_robot
+  - action_repeat
