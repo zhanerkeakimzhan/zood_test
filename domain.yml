@@ -43,6 +43,7 @@ intents:
   - expresselivery
   - standartdelivery
   - zoodboxdelivery
+  - canthear
   - soundlesslyUZ
   - operatorUZ
   - affirmUZ
@@ -80,8 +81,25 @@ intents:
   - expresseliveryUZ
   - standartdeliveryUZ
   - zoodboxdeliveryUZ
+  - canthearUZ
   - out_of_scope
   - nlu_fallback
+
+# entites:
+#   - country
+# slots:
+#   country:
+#     type: text
+#     influence_conversation: false
+#     mappings:
+#       - type: from_entity
+#         entity: country
+
+# forms:
+#   deliverytime_form:
+#     required_slots:
+#       - country
+#     # utter_ask_country: utter_ask_country
 
 responses:
   utter_greetRU:
@@ -250,6 +268,13 @@ responses:
   utter_q3UZ:
   - text: 63.0 | Iltimos, mahalliy sotuvchidan yoki chet eldan buyurtma berganingizni tekshiring?
 
+  utter_ask_country:
+    - text: 62.0 | Уточните, пожалуйста, вы заказали от местного продавца или зарубежного?
+  
+  utter_ask_countryUZ:
+  - text: 63.0 | Iltimos, mahalliy sotuvchidan yoki chet eldan buyurtma berganingizni tekshiring?
+
+
   utter_dontknowsellerRU:
   - text: 64.0 | Поняла вас. Давайте я расскажу про условия доставки. Если вы заказываете от местного продавца, доставка обычно занимает от 3 до 5 дней, максимум до 7 дней. Если же вы заказываете от зарубежного продавца, то время доставки может составить от 15 до 25 дней. Также нужно учесть, что суббота и воскресенье не являются рабочими днями.
   utter_dontknowsellerUZ:
@@ -320,6 +345,15 @@ responses:
   utter_silence2UZ:
   - text: 87.0 | Qo'ng'iroq qilganingiz uchun tashakkur! Afsuski, texnik muammolar tufayli men sizni eshita olmadim. Barcha savollar uchun Zood ilovasini qo'llab-quvvatlash chatiga murojaat qilishingiz mumkin. Xayr!
 
+  utter_canthearRU:
+  - text: 88.0 | Ммм секундочку… сейчас лучше?
+  - text: 88.1 | Так а сейчас меня слышно?
+  utter_canthearUZ:
+  - text: 89.0 | Mmm soniya ... hozir yaxshiroqmi?
+  - text: 89.1 | Xo'sh, endi meni eshitayapsizmi?
+
 actions:
   - action_restart_robot
   - action_repeat
+  - action_operatorRU
+  - action_operatorUZ

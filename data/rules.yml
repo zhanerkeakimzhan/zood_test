@@ -37,25 +37,25 @@ rules:
   steps:
   - action: utter_q1RU
   - intent: operator
-  - action: utter_operatorRU
+  - action: action_operatorRU
 
 - rule: q1 operator RU
   steps:
   - action: utter_q1RU
   - intent: operatorUZ
-  - action: utter_operatorUZ
+  - action: action_operatorUZ
 
 - rule: q1 operator UZ
   steps:
   - action: utter_q1UZ
   - intent: operator
-  - action: utter_operatorRU
+  - action: action_operatorRU
 
 - rule: q1 operator UZ
   steps:
   - action: utter_q1UZ
   - intent: operatorUZ
-  - action: utter_operatorUZ
+  - action: action_operatorUZ
 
 # -----
 - rule: q1 findpoduct RU
@@ -902,6 +902,38 @@ rules:
   - action: utter_localsellerUZ
   - action: utter_q4UZ
 
+# q1
+- rule: q1-RU canthear answer-RU
+  steps:
+  - action: utter_q1RU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: q1-RU canthear answer-UZ
+  steps:
+  - action: utter_q1RU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ  
+  - action: utter_canthearUZ
+
+- rule: q1-UZ canthear answer-RU
+  steps:
+  - action: utter_q1UZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: q1-UZ canthear answer-UZ
+  steps:
+  - action: utter_q1UZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ 
+  - action: utter_canthearUZ
 
 # q3
 - rule: q3-RU dontknow
@@ -962,6 +994,22 @@ rules:
   - action: utter_localsellerUZ
   - action: utter_q4UZ
 
+# q3
+- rule: q3-RU canthear answer-RU
+  steps:
+  - action: utter_q3RU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: q3-UZ canthear answer-UZ
+  steps:
+  - action: utter_q3UZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearUZ
 
 # q4
 - rule: q4-RU dontknow
@@ -1042,6 +1090,22 @@ rules:
   - action: utter_zoodboxdeliveryUZ
   - action: utter_q5UZ
 
+# q4
+- rule: q4-RU canthear answer-RU
+  steps:
+  - action: utter_q4RU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: q4-UZ canthear answer-UZ
+  steps:
+  - action: utter_q4UZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearUZ
 
 #operator
 - rule: dont need operator RU
@@ -1084,481 +1148,6 @@ rules:
   - action: utter_operator2UZ
   - action: action_restart_robot
 
-
-# silence
-# -----
-- rule: utter_silenceRU change lang to UZ
-  steps:
-    - action: utter_silenceRU
-    - intent: changeLangUZ
-    - action: utter_silenceUZ
-
-- rule: utter_silenceUZ change lang to RU
-  steps:
-    - action: utter_silenceUZ
-    - intent: changeLangRU
-    - action: utter_silenceRU
-
-# -----
-- rule: silence repeat RU
-  steps:
-  - action: utter_silenceRU
-  - intent: repeat
-  - action: action_repeat
-
-- rule: silence repeat UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: repeat
-  - action: action_repeat
-
-# -----
-- rule: silence operator RU
-  steps:
-  - action: utter_silenceRU
-  - intent: operator
-  - action: utter_operatorRU
-
-- rule: silence operator UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: operatorUZ
-  - action: utter_operatorUZ
-
-# -----
-- rule: silence findpoduct RU
-  steps:
-  - action: utter_silenceRU
-  - intent: howfindpoduct
-  - action: utter_findpoductRU
-  - action: utter_q5RU
-
-- rule: silence findpoduct UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: howfindpoductUZ
-  - action: utter_findpoductUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU howaddnewcard
-  steps:
-  - action: utter_silenceRU
-  - intent: howaddnewcard
-  - action: utter_addnewcardRU
-  - action: utter_q5RU
-
-- rule: silence-UZ howaddnewcard
-  steps:
-  - action: utter_silenceUZ
-  - intent: howaddnewcardUZ
-  - action: utter_addnewcardUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU whatkindofassortment answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: whatkindofassortment
-  - action: utter_assortmentRU
-  - action: utter_q5RU
-
-- rule: silence-UZ whatkindofassortment answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: whatkindofassortmentUZ
-  - action: utter_assortmentUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU deliverymethods answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: deliverymethods
-  - action: utter_deliverymethodsRU
-  - action: utter_q5RU
-
-- rule: silence-UZ deliverymethods answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: deliverymethodsUZ
-  - action: utter_deliverymethodsUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU validityperiodofbonuses answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: validityperiodofbonuses
-  - action: utter_periodbonusesRU
-  - action: utter_q5RU
-
-- rule: silence-UZ validityperiodofbonuses answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: validityperiodofbonusesUZ
-  - action: utter_periodbonusesUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU whatiscashback answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: whatiscashback
-  - action: utter_whatiscashbackRU
-  - action: utter_q5RU
-
-- rule: silence-UZ whatiscashback answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: whatiscashbackUZ
-  - action: utter_whatiscashbackUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU changephonenumber answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: changephonenumber
-  - action: utter_changephonenumberRU
-  - action: utter_q5RU
-
-- rule: silence-UZ changephonenumber answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: changephonenumberUZ
-  - action: utter_changephonenumberUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU installmentperiod answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: installmentperiod
-  - action: utter_howlonginstallmentRU
-  - action: utter_q5RU
-
-- rule: silence-UZ installmentperiod answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: installmentperiodUZ
-  - action: utter_howlonginstallmentUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU pickuppoints answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: pickuppoints
-  - action: utter_pickuppointsRU
-  - action: utter_q5RU
-
-- rule: silence-UZ pickuppoints answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: pickuppointsUZ
-  - action: utter_pickuppointsUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU installmentconditions answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: installmentconditions
-  - action: utter_conditionsforinstallmentRU
-  - action: utter_q5RU
-
-- rule: silence-UZ installmentconditions answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: installmentconditionsUZ
-  - action: utter_conditionsforinstallmentUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU howmanybonuses answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: howmanybonuses
-  - action: utter_howmanybonusesRU
-  - action: utter_q5RU
-
-- rule: silence-UZ howmanybonuses answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: howmanybonusesUZ
-  - action: utter_howmanybonusesUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU earlyrepayment answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: earlyrepayment
-  - action: utter_earlyrepaymentRU
-  - action: utter_q5RU
-
-- rule: silence-UZ earlyrepayment answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: earlyrepaymentUZ
-  - action: utter_earlyrepaymentUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU getbonusesback answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: getbonusesback
-  - action: utter_getbonusesbackRU
-  - action: utter_q5RU
-
-- rule: silence-UZ getbonusesback answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: getbonusesbackUZ
-  - action: utter_getbonusesbackUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU imeicode answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: imeicode
-  - action: utter_imeicodeRU
-  - action: utter_q5RU
-
-- rule: silence-UZ imeicode answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: imeicodeUZ
-  - action: utter_imeicodeUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU withdrewtwice answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: withdrewtwice
-  - action: utter_withdrawntwiceRU
-  - action: utter_q5RU
-
-- rule: silence-UZ withdrewtwice answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: withdrewtwiceUZ
-  - action: utter_withdrawntwiceUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU nonecessaryproduct answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: nonecessaryproduct
-  - action: utter_nonecessaryproductRU
-  - action: utter_q5RU
-
-- rule: silence-UZ nonecessaryproduct answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: nonecessaryproductUZ
-  - action: utter_nonecessaryproductUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU howtoplaceanorder answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: howtoplaceanorder
-  - action: utter_placeanorderRU
-  - action: utter_q5RU
-
-- rule: silence-UZ howtoplaceanorder answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: howtoplaceanorderUZ
-  - action: utter_placeanorderUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU robot answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: robot
-  - action: utter_robotRU
-  - action: utter_q5RU
-
-- rule: silence-UZ robot answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: robotUZ
-  - action: utter_robotUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU howtogetalimit answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: howtogetalimit
-  - action: utter_getalimitRU
-  - action: utter_q5RU
-
-- rule: silence-UZ howtogetalimit answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: howtogetalimitUZ
-  - action: utter_getalimitUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU cantloginapp answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: cantloginapp
-  - action: utter_cantlogininappRU
-  - action: utter_q5RU
-
-- rule: silence-UZ cantloginapp answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: cantloginappUZ
-  - action: utter_cantlogininappUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU initialpayment answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: initialpayment
-  - action: utter_initialpaymentRU
-  - action: utter_q5RU
-
-- rule: silence-UZ initialpayment answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: initialpaymentUZ
-  - action: utter_initialpaymentUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU cantpayontime answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: cantpayontime
-  - action: utter_cantpayontimeRU
-  - action: utter_q5RU
-
-- rule: silence-UZ cantpayontime answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: cantpayontimeUZ
-  - action: utter_cantpayontimeUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU changecard answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: changecard
-  - action: utter_changingcardRU
-  - action: utter_q5RU
-
-- rule: silence-UZ changecard answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: changecardUZ
-  - action: utter_changingcardUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU return answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: return
-  - action: utter_q2RU
-
-- rule: silence-UZ return answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: returnUZ
-  - action: utter_q2UZ
-
-# -----
-- rule: silence-RU soundlessly answer-RU
-  steps:
-  - action: utter_silenceRU
-  - or:
-    - intent: out_of_scope
-    - intent: nlu_fallback
-  - action: utter_soundlesslyRU
-
-- rule: silence-UZ soundlessly answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - or:
-    - intent: out_of_scope
-    - intent: nlu_fallback
-  - action: utter_soundlesslyUZ
-
-# -----
-- rule: silence-RU silence answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: silence
-  - action: utter_silence2RU
-  - action: action_restart_robot
-
-- rule: silence-UZ silence answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: silence
-  - action: utter_silence2UZ
-  - action: action_restart_robot
-
-# -----
-- rule: silence-RU whenorderbedelivered answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: whenorderbedelivered
-  - action: utter_q3RU
-
-- rule: silence-UZ whenorderbedelivered answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: whenorderbedeliveredUZ
-  - action: utter_q3UZ
-
-# -----
-- rule: silence-RU foreignseller answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: foreignseller
-  - action: utter_foreignsellerRU
-  - action: utter_q5RU
-
-- rule: silence-UZ foreignseller answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: foreignsellerUZ
-  - action: utter_foreignsellerUZ
-  - action: utter_q5UZ
-
-# -----
-- rule: silence-RU localseller answer-RU
-  steps:
-  - action: utter_silenceRU
-  - intent: localseller
-  - action: utter_localsellerRU
-  - action: utter_q4RU
-
-- rule: silence-UZ localseller answer-UZ
-  steps:
-  - action: utter_silenceUZ
-  - intent: localsellerUZ
-  - action: utter_localsellerUZ
-  - action: utter_q4UZ
-
-
 # q5
 # -----
 - rule: q5-RU change lang to UZ
@@ -1590,29 +1179,35 @@ rules:
 - rule: q5 operator RU
   steps:
   - action: utter_q5RU
-  - intent: operator
-  - action: utter_operator2RU
-  - action: action_restart_robot
+  - or:
+    - intent: operator
+    - intent: operatorUZ
+  - action: action_operatorRU
 
 - rule: q5 operator UZ
   steps:
   - action: utter_q5UZ
-  - intent: operatorUZ
-  - action: utter_operator2UZ
-  - action: action_restart_robot
+  - or:
+    - intent: operator
+    - intent: operatorUZ
+  - action: action_operatorUZ
 
 # -----
 - rule: q5 findpoduct RU
   steps:
   - action: utter_q5RU
-  - intent: howfindpoduct
+  - or:
+    - intent: howfindpoduct
+    - intent: howfindpoductUZ
   - action: utter_findpoductRU
   - action: utter_q5RU
 
 - rule: q5 findpoduct UZ
   steps:
   - action: utter_q5UZ
-  - intent: howfindpoductUZ
+  - or:
+    - intent: howfindpoduct
+    - intent: howfindpoductUZ
   - action: utter_findpoductUZ
   - action: utter_q5UZ
 
@@ -1620,14 +1215,18 @@ rules:
 - rule: q5-RU howaddnewcard
   steps:
   - action: utter_q5RU
-  - intent: howaddnewcard
+  - or:
+    - intent: howaddnewcard
+    - intent: howaddnewcardUZ
   - action: utter_addnewcardRU
   - action: utter_q5RU
 
 - rule: q5-UZ howaddnewcard
   steps:
   - action: utter_q5UZ
-  - intent: howaddnewcardUZ
+  - or:
+    - intent: howaddnewcard
+    - intent: howaddnewcardUZ
   - action: utter_addnewcardUZ
   - action: utter_q5UZ
 
@@ -1635,14 +1234,18 @@ rules:
 - rule: q5-RU whatkindofassortment answer-RU
   steps:
   - action: utter_q5RU
-  - intent: whatkindofassortment
+  - or:
+    - intent: whatkindofassortment
+    - intent: whatkindofassortmentUZ
   - action: utter_assortmentRU
   - action: utter_q5RU
 
 - rule: q5-UZ whatkindofassortment answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: whatkindofassortmentUZ
+  - or:
+    - intent: whatkindofassortment
+    - intent: whatkindofassortmentUZ
   - action: utter_assortmentUZ
   - action: utter_q5UZ
 
@@ -1650,14 +1253,18 @@ rules:
 - rule: q5-RU deliverymethods answer-RU
   steps:
   - action: utter_q5RU
-  - intent: deliverymethods
+  - or:
+    - intent: deliverymethods
+    - intent: deliverymethodsUZ
   - action: utter_deliverymethodsRU
   - action: utter_q5RU
 
 - rule: q5-UZ deliverymethods answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: deliverymethodsUZ
+  - or:
+    - intent: deliverymethods
+    - intent: deliverymethodsUZ
   - action: utter_deliverymethodsUZ
   - action: utter_q5UZ
 
@@ -1665,14 +1272,18 @@ rules:
 - rule: q5-RU validityperiodofbonuses answer-RU
   steps:
   - action: utter_q5RU
-  - intent: validityperiodofbonuses
+  - or:
+    - intent: validityperiodofbonuses
+    - intent: validityperiodofbonusesUZ
   - action: utter_periodbonusesRU
   - action: utter_q5RU
 
 - rule: q5-UZ validityperiodofbonuses answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: validityperiodofbonusesUZ
+  - or:
+    - intent: validityperiodofbonuses
+    - intent: validityperiodofbonusesUZ
   - action: utter_periodbonusesUZ
   - action: utter_q5UZ
 
@@ -1680,14 +1291,18 @@ rules:
 - rule: q5-RU whatiscashback answer-RU
   steps:
   - action: utter_q5RU
-  - intent: whatiscashback
+  - or:
+    - intent: whatiscashback
+    - intent: whatiscashbackUZ
   - action: utter_whatiscashbackRU
   - action: utter_q5RU
 
 - rule: q5-UZ whatiscashback answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: whatiscashbackUZ
+  - or:
+    - intent: whatiscashback
+    - intent: whatiscashbackUZ
   - action: utter_whatiscashbackUZ
   - action: utter_q5UZ
 
@@ -1695,14 +1310,18 @@ rules:
 - rule: q5-RU changephonenumber answer-RU
   steps:
   - action: utter_q5RU
-  - intent: changephonenumber
+  - or:
+    - intent: changephonenumber
+    - intent: changephonenumberUZ
   - action: utter_changephonenumberRU
   - action: utter_q5RU
 
 - rule: q5-UZ changephonenumber answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: changephonenumberUZ
+  - or:
+    - intent: changephonenumber
+    - intent: changephonenumberUZ
   - action: utter_changephonenumberUZ
   - action: utter_q5UZ
 
@@ -1710,14 +1329,18 @@ rules:
 - rule: q5-RU installmentperiod answer-RU
   steps:
   - action: utter_q5RU
-  - intent: installmentperiod
+  - or:
+    - intent: installmentperiod
+    - intent: installmentperiodUZ
   - action: utter_howlonginstallmentRU
   - action: utter_q5RU
 
 - rule: q5-UZ installmentperiod answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: installmentperiodUZ
+  - or:
+    - intent: installmentperiod
+    - intent: installmentperiodUZ
   - action: utter_howlonginstallmentUZ
   - action: utter_q5UZ
 
@@ -1725,14 +1348,18 @@ rules:
 - rule: q5-RU pickuppoints answer-RU
   steps:
   - action: utter_q5RU
-  - intent: pickuppoints
+  - or:
+    - intent: pickuppoints
+    - intent: pickuppointsUZ
   - action: utter_pickuppointsRU
   - action: utter_q5RU
 
 - rule: q5-UZ pickuppoints answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: pickuppointsUZ
+  - or:
+    - intent: pickuppoints
+    - intent: pickuppointsUZ
   - action: utter_pickuppointsUZ
   - action: utter_q5UZ
 
@@ -1740,14 +1367,18 @@ rules:
 - rule: q5-RU installmentconditions answer-RU
   steps:
   - action: utter_q5RU
-  - intent: installmentconditions
+  - or:
+    - intent: installmentconditions
+    - intent: installmentconditionsUZ
   - action: utter_conditionsforinstallmentRU
   - action: utter_q5RU
 
 - rule: q5-UZ installmentconditions answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: installmentconditionsUZ
+  - or:
+    - intent: installmentconditions
+    - intent: installmentconditionsUZ
   - action: utter_conditionsforinstallmentUZ
   - action: utter_q5UZ
 
@@ -1755,14 +1386,18 @@ rules:
 - rule: q5-RU howmanybonuses answer-RU
   steps:
   - action: utter_q5RU
-  - intent: howmanybonuses
+  - or:
+    - intent: howmanybonuses
+    - intent: howmanybonusesUZ
   - action: utter_howmanybonusesRU
   - action: utter_q5RU
 
 - rule: q5-UZ howmanybonuses answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: howmanybonusesUZ
+  - or:
+    - intent: howmanybonuses
+    - intent: howmanybonusesUZ
   - action: utter_howmanybonusesUZ
   - action: utter_q5UZ
 
@@ -1770,14 +1405,18 @@ rules:
 - rule: q5-RU earlyrepayment answer-RU
   steps:
   - action: utter_q5RU
-  - intent: earlyrepayment
+  - or:
+    - intent: earlyrepayment
+    - intent: earlyrepaymentUZ
   - action: utter_earlyrepaymentRU
   - action: utter_q5RU
 
 - rule: q5-UZ earlyrepayment answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: earlyrepaymentUZ
+  - or:
+    - intent: earlyrepayment
+    - intent: earlyrepaymentUZ
   - action: utter_earlyrepaymentUZ
   - action: utter_q5UZ
 
@@ -1785,14 +1424,18 @@ rules:
 - rule: q5-RU getbonusesback answer-RU
   steps:
   - action: utter_q5RU
-  - intent: getbonusesback
+  - or:
+    - intent: getbonusesback
+    - intent: getbonusesbackUZ
   - action: utter_getbonusesbackRU
   - action: utter_q5RU
 
 - rule: q5-UZ getbonusesback answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: getbonusesbackUZ
+  - or:
+    - intent: getbonusesback
+    - intent: getbonusesbackUZ
   - action: utter_getbonusesbackUZ
   - action: utter_q5UZ
 
@@ -1800,14 +1443,18 @@ rules:
 - rule: q5-RU imeicode answer-RU
   steps:
   - action: utter_q5RU
-  - intent: imeicode
+  - or:
+    - intent: imeicode
+    - intent: imeicodeUZ
   - action: utter_imeicodeRU
   - action: utter_q5RU
 
 - rule: q5-UZ imeicode answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: imeicodeUZ
+  - or:
+    - intent: imeicode
+    - intent: imeicodeUZ
   - action: utter_imeicodeUZ
   - action: utter_q5UZ
 
@@ -1815,14 +1462,18 @@ rules:
 - rule: q5-RU withdrewtwice answer-RU
   steps:
   - action: utter_q5RU
-  - intent: withdrewtwice
+  - or:
+    - intent: withdrewtwice
+    - intent: withdrewtwiceUZ
   - action: utter_withdrawntwiceRU
   - action: utter_q5RU
 
 - rule: q5-UZ withdrewtwice answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: withdrewtwiceUZ
+  - or:
+    - intent: withdrewtwice
+    - intent: withdrewtwiceUZ
   - action: utter_withdrawntwiceUZ
   - action: utter_q5UZ
 
@@ -1830,14 +1481,18 @@ rules:
 - rule: q5-RU nonecessaryproduct answer-RU
   steps:
   - action: utter_q5RU
-  - intent: nonecessaryproduct
+  - or:
+    - intent: nonecessaryproduct
+    - intent: nonecessaryproductUZ
   - action: utter_nonecessaryproductRU
   - action: utter_q5RU
 
 - rule: q5-UZ nonecessaryproduct answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: nonecessaryproductUZ
+  - or:
+    - intent: nonecessaryproduct
+    - intent: nonecessaryproductUZ
   - action: utter_nonecessaryproductUZ
   - action: utter_q5UZ
 
@@ -1845,14 +1500,18 @@ rules:
 - rule: q5-RU howtoplaceanorder answer-RU
   steps:
   - action: utter_q5RU
-  - intent: howtoplaceanorder
+  - or:
+    - intent: howtoplaceanorder
+    - intent: howtoplaceanorderUZ
   - action: utter_placeanorderRU
   - action: utter_q5RU
 
 - rule: q5-UZ howtoplaceanorder answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: howtoplaceanorderUZ
+  - or:
+    - intent: howtoplaceanorder
+    - intent: howtoplaceanorderUZ
   - action: utter_placeanorderUZ
   - action: utter_q5UZ
 
@@ -1860,14 +1519,18 @@ rules:
 - rule: q5-RU robot answer-RU
   steps:
   - action: utter_q5RU
-  - intent: robot
+  - or:
+    - intent: robot
+    - intent: robotUZ
   - action: utter_robotRU
   - action: utter_q5RU
 
 - rule: q5-UZ robot answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: robotUZ
+  - or:
+    - intent: robot
+    - intent: robotUZ
   - action: utter_robotUZ
   - action: utter_q5UZ
 
@@ -1875,14 +1538,18 @@ rules:
 - rule: q5-RU howtogetalimit answer-RU
   steps:
   - action: utter_q5RU
-  - intent: howtogetalimit
+  - or:
+    - intent: howtogetalimit
+    - intent: howtogetalimitUZ
   - action: utter_getalimitRU
   - action: utter_q5RU
 
 - rule: q5-UZ howtogetalimit answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: howtogetalimitUZ
+  - or:
+    - intent: howtogetalimit
+    - intent: howtogetalimitUZ
   - action: utter_getalimitUZ
   - action: utter_q5UZ
 
@@ -1890,14 +1557,18 @@ rules:
 - rule: q5-RU cantloginapp answer-RU
   steps:
   - action: utter_q5RU
-  - intent: cantloginapp
+  - or:
+    - intent: cantloginapp
+    - intent: cantloginappUZ
   - action: utter_cantlogininappRU
   - action: utter_q5RU
 
 - rule: q5-UZ cantloginapp answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: cantloginappUZ
+  - or:
+    - intent: cantloginapp
+    - intent: cantloginappUZ
   - action: utter_cantlogininappUZ
   - action: utter_q5UZ
 
@@ -1905,14 +1576,18 @@ rules:
 - rule: q5-RU initialpayment answer-RU
   steps:
   - action: utter_q5RU
-  - intent: initialpayment
+  - or:
+    - intent: initialpayment
+    - intent: initialpaymentUZ
   - action: utter_initialpaymentRU
   - action: utter_q5RU
 
 - rule: q5-UZ initialpayment answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: initialpaymentUZ
+  - or:
+    - intent: initialpayment
+    - intent: initialpaymentUZ
   - action: utter_initialpaymentUZ
   - action: utter_q5UZ
 
@@ -1920,14 +1595,18 @@ rules:
 - rule: q5-RU cantpayontime answer-RU
   steps:
   - action: utter_q5RU
-  - intent: cantpayontime
+  - or:
+    - intent: cantpayontime
+    - intent: cantpayontimeUZ
   - action: utter_cantpayontimeRU
   - action: utter_q5RU
 
 - rule: q5-UZ cantpayontime answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: cantpayontimeUZ
+  - or:
+    - intent: cantpayontime
+    - intent: cantpayontimeUZ
   - action: utter_cantpayontimeUZ
   - action: utter_q5UZ
 
@@ -1935,14 +1614,18 @@ rules:
 - rule: q5-RU changecard answer-RU
   steps:
   - action: utter_q5RU
-  - intent: changecard
+  - or:
+    - intent: changecard
+    - intent: changecardUZ
   - action: utter_changingcardRU
   - action: utter_q5RU
 
 - rule: q5-UZ changecard answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: changecardUZ
+  - or:
+    - intent: changecard
+    - intent: changecardUZ
   - action: utter_changingcardUZ
   - action: utter_q5UZ
 
@@ -1950,13 +1633,17 @@ rules:
 - rule: q5-RU return answer-RU
   steps:
   - action: utter_q5RU
-  - intent: return
+  - or:
+    - intent: return
+    - intent: returnUZ
   - action: utter_q2RU
 
 - rule: q5-UZ return answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: returnUZ
+  - or:
+    - intent: return
+    - intent: returnUZ
   - action: utter_q2UZ
 
 # -----
@@ -1980,40 +1667,71 @@ rules:
 - rule: q5-RU silence answer-RU
   steps:
   - action: utter_q5RU
+  - or:
   - intent: silence
   - action: utter_silenceRU
 
 - rule: q5-UZ silence answer-UZ
   steps:
   - action: utter_q5UZ
+  - or:
   - intent: silence
   - action: utter_silenceUZ
+
+
+# # # ----form
+# - rule: q5-RU whenorderbedelivered Activate form answer-RU
+#   steps:
+#   - action: utter_q5RU
+#   - or:
+#     - intent: whenorderbedelivered
+#     - intent: whenorderbedeliveredUZ
+#   - action: deliverytime_form
+#   - active_loop: deliverytime_form
+
+# - rule: q5-RU whenorderbedelivered заполнение и завершение answer-RU
+#   condition:
+#     - active_loop: deliverytime_form
+#   steps:
+#     - action: deliverytime_form
+#     - slot_was_set:
+#       - country: "foreignseller"
+#     - active_loop: null
+#     - action: utter_foreignsellerRU
 
 # -----
 - rule: q5-RU whenorderbedelivered answer-RU
   steps:
   - action: utter_q5RU
-  - intent: whenorderbedelivered
+  - or:
+    - intent: whenorderbedelivered
+    - intent: whenorderbedeliveredUZ
   - action: utter_q3RU
 
 - rule: q5-UZ whenorderbedelivered answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: whenorderbedeliveredUZ
+  - or:
+    - intent: whenorderbedelivered
+    - intent: whenorderbedeliveredUZ
   - action: utter_q3UZ
 
 # -----
 - rule: q5-RU foreignseller answer-RU
   steps:
   - action: utter_q5RU
-  - intent: foreignseller
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
   - action: utter_foreignsellerRU
   - action: utter_q5RU
 
 - rule: q5-UZ foreignseller answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: foreignsellerUZ
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
   - action: utter_foreignsellerUZ
   - action: utter_q5UZ
 
@@ -2021,14 +1739,18 @@ rules:
 - rule: q5-RU localseller answer-RU
   steps:
   - action: utter_q5RU
-  - intent: localseller
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
   - action: utter_localsellerRU
   - action: utter_q4RU
 
 - rule: q5-UZ localseller answer-UZ
   steps:
   - action: utter_q5UZ
-  - intent: localsellerUZ
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
   - action: utter_localsellerUZ
   - action: utter_q4UZ
 
@@ -2036,16 +1758,36 @@ rules:
 - rule: q5 deny RU
   steps:
   - action: utter_q5RU
-  - intent: deny
+  - or:
+    - intent: deny
+    - intent: denyUZ
   - action: utter_denyRU
   - action: action_restart_robot
 
 - rule: q5 deny UZ
   steps:
   - action: utter_q5UZ
-  - intent: denyUZ
+  - or:
+    - intent: deny
+    - intent: denyUZ
   - action: utter_denyUZ
   - action: action_restart_robot
+
+- rule: q5-RU canthear answer-RU
+  steps:
+  - action: utter_q5RU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: q5-UZ canthear answer-UZ
+  steps:
+  - action: utter_q5UZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearUZ
 
 # soundlessly
 # -----
@@ -2078,29 +1820,35 @@ rules:
 - rule: soundlessly operator RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: operator
-  - action: utter_operator2RU
-  - action: action_restart_robot
+  - or:
+    - intent: operator
+    - intent: operatorUZ
+  - action: action_operatorRU
 
 - rule: soundlessly operator UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: operatorUZ
-  - action: utter_operator2UZ
-  - action: action_restart_robot
+  - or:
+    - intent: operator
+    - intent: operatorUZ
+  - action: action_operatorUZ
 
 # -----
 - rule: soundlessly findpoduct RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: howfindpoduct
+  - or:
+    - intent: howfindpoduct
+    - intent: howfindpoductUZ
   - action: utter_findpoductRU
   - action: utter_q5RU
 
 - rule: soundlessly findpoduct UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: howfindpoductUZ
+  - or:
+    - intent: howfindpoduct
+    - intent: howfindpoductUZ
   - action: utter_findpoductUZ
   - action: utter_q5UZ
 
@@ -2108,14 +1856,17 @@ rules:
 - rule: soundlessly-RU howaddnewcard
   steps:
   - action: utter_soundlesslyRU
-  - intent: howaddnewcard
-  - action: utter_addnewcardRU
+  - or:
+    - intent: howaddnewcard
+    - intent: howaddnewcardUZ
   - action: utter_q5RU
 
 - rule: soundlessly-UZ howaddnewcard
   steps:
   - action: utter_soundlesslyUZ
-  - intent: howaddnewcardUZ
+  - or:
+    - intent: howaddnewcard
+    - intent: howaddnewcardUZ
   - action: utter_addnewcardUZ
   - action: utter_q5UZ
 
@@ -2123,14 +1874,18 @@ rules:
 - rule: soundlessly-RU whatkindofassortment answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: whatkindofassortment
+  - or:
+    - intent: whatkindofassortment
+    - intent: whatkindofassortmentUZ
   - action: utter_assortmentRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ whatkindofassortment answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: whatkindofassortmentUZ
+  - or:
+    - intent: whatkindofassortment
+    - intent: whatkindofassortmentUZ
   - action: utter_assortmentUZ
   - action: utter_q5UZ
 
@@ -2138,14 +1893,17 @@ rules:
 - rule: soundlessly-RU deliverymethods answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: deliverymethods
-  - action: utter_deliverymethodsRU
+  - or:
+    - intent: deliverymethods
+    - intent: deliverymethodsUZ
   - action: utter_q5RU
 
 - rule: soundlessly-UZ deliverymethods answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: deliverymethodsUZ
+  - or:
+    - intent: deliverymethods
+    - intent: deliverymethodsUZ
   - action: utter_deliverymethodsUZ
   - action: utter_q5UZ
 
@@ -2153,14 +1911,18 @@ rules:
 - rule: soundlessly-RU validityperiodofbonuses answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: validityperiodofbonuses
+  - or:
+    - intent: validityperiodofbonuses
+    - intent: validityperiodofbonusesUZ
   - action: utter_periodbonusesRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ validityperiodofbonuses answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: validityperiodofbonusesUZ
+  - or:
+    - intent: validityperiodofbonuses
+    - intent: validityperiodofbonusesUZ
   - action: utter_periodbonusesUZ
   - action: utter_q5UZ
 
@@ -2168,14 +1930,18 @@ rules:
 - rule: soundlessly-RU whatiscashback answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: whatiscashback
+  - or:
+    - intent: whatiscashback
+    - intent: whatiscashbackUZ
   - action: utter_whatiscashbackRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ whatiscashback answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: whatiscashbackUZ
+  - or:
+    - intent: whatiscashback
+    - intent: whatiscashbackUZ
   - action: utter_whatiscashbackUZ
   - action: utter_q5UZ
 
@@ -2183,14 +1949,18 @@ rules:
 - rule: soundlessly-RU changephonenumber answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: changephonenumber
+  - or:
+    - intent: changephonenumber
+    - intent: changephonenumberUZ
   - action: utter_changephonenumberRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ changephonenumber answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: changephonenumberUZ
+  - or:
+    - intent: changephonenumber
+    - intent: changephonenumberUZ
   - action: utter_changephonenumberUZ
   - action: utter_q5UZ
 
@@ -2198,14 +1968,18 @@ rules:
 - rule: soundlessly-RU installmentperiod answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: installmentperiod
+  - or:
+    - intent: installmentperiod
+    - intent: installmentperiodUZ
   - action: utter_howlonginstallmentRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ installmentperiod answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: installmentperiodUZ
+  - or:
+    - intent: installmentperiod
+    - intent: installmentperiodUZ
   - action: utter_howlonginstallmentUZ
   - action: utter_q5UZ
 
@@ -2213,14 +1987,18 @@ rules:
 - rule: soundlessly-RU pickuppoints answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: pickuppoints
+  - or:
+    - intent: pickuppoints
+    - intent: pickuppointsUZ
   - action: utter_pickuppointsRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ pickuppoints answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: pickuppointsUZ
+  - or:
+    - intent: pickuppoints
+    - intent: pickuppointsUZ
   - action: utter_pickuppointsUZ
   - action: utter_q5UZ
 
@@ -2228,14 +2006,18 @@ rules:
 - rule: soundlessly-RU installmentconditions answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: installmentconditions
+  - or:
+    - intent: installmentconditions
+    - intent: installmentconditionsUZ
   - action: utter_conditionsforinstallmentRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ installmentconditions answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: installmentconditionsUZ
+  - or:
+    - intent: installmentconditions
+    - intent: installmentconditionsUZ
   - action: utter_conditionsforinstallmentUZ
   - action: utter_q5UZ
 
@@ -2243,14 +2025,18 @@ rules:
 - rule: soundlessly-RU howmanybonuses answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: howmanybonuses
+  - or:
+    - intent: howmanybonuses
+    - intent: howmanybonusesUZ
   - action: utter_howmanybonusesRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ howmanybonuses answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: howmanybonusesUZ
+  - or:
+    - intent: howmanybonuses
+    - intent: howmanybonusesUZ
   - action: utter_howmanybonusesUZ
   - action: utter_q5UZ
 
@@ -2258,14 +2044,18 @@ rules:
 - rule: soundlessly-RU earlyrepayment answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: earlyrepayment
+  - or:
+    - intent: earlyrepayment
+    - intent: earlyrepaymentUZ
   - action: utter_earlyrepaymentRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ earlyrepayment answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: earlyrepaymentUZ
+  - or:
+    - intent: earlyrepayment
+    - intent: earlyrepaymentUZ
   - action: utter_earlyrepaymentUZ
   - action: utter_q5UZ
 
@@ -2273,14 +2063,18 @@ rules:
 - rule: soundlessly-RU getbonusesback answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: getbonusesback
+  - or:
+    - intent: getbonusesback
+    - intent: getbonusesbackUZ
   - action: utter_getbonusesbackRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ getbonusesback answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: getbonusesbackUZ
+  - or:
+    - intent: getbonusesback
+    - intent: getbonusesbackUZ
   - action: utter_getbonusesbackUZ
   - action: utter_q5UZ
 
@@ -2288,14 +2082,18 @@ rules:
 - rule: soundlessly-RU imeicode answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: imeicode
+  - or:
+    - intent: imeicode
+    - intent: imeicodeUZ
   - action: utter_imeicodeRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ imeicode answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: imeicodeUZ
+  - or:
+    - intent: imeicode
+    - intent: imeicodeUZ
   - action: utter_imeicodeUZ
   - action: utter_q5UZ
 
@@ -2303,14 +2101,18 @@ rules:
 - rule: soundlessly-RU withdrewtwice answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: withdrewtwice
+  - or:
+    - intent: withdrewtwice
+    - intent: withdrewtwiceUZ
   - action: utter_withdrawntwiceRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ withdrewtwice answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: withdrewtwiceUZ
+  - or:
+    - intent: withdrewtwice
+    - intent: withdrewtwiceUZ
   - action: utter_withdrawntwiceUZ
   - action: utter_q5UZ
 
@@ -2318,14 +2120,18 @@ rules:
 - rule: soundlessly-RU nonecessaryproduct answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: nonecessaryproduct
+  - or:
+    - intent: nonecessaryproduct
+    - intent: nonecessaryproductUZ
   - action: utter_nonecessaryproductRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ nonecessaryproduct answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: nonecessaryproductUZ
+  - or:
+    - intent: nonecessaryproduct
+    - intent: nonecessaryproductUZ
   - action: utter_nonecessaryproductUZ
   - action: utter_q5UZ
 
@@ -2333,14 +2139,18 @@ rules:
 - rule: soundlessly-RU howtoplaceanorder answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: howtoplaceanorder
+  - or:
+    - intent: howtoplaceanorder
+    - intent: howtoplaceanorderUZ
   - action: utter_placeanorderRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ howtoplaceanorder answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: howtoplaceanorderUZ
+  - or:
+    - intent: howtoplaceanorder
+    - intent: howtoplaceanorderUZ
   - action: utter_placeanorderUZ
   - action: utter_q5UZ
 
@@ -2348,14 +2158,18 @@ rules:
 - rule: soundlessly-RU robot answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: robot
+  - or:
+    - intent: robot
+    - intent: robotUZ
   - action: utter_robotRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ robot answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: robotUZ
+  - or:
+    - intent: robot
+    - intent: robotUZ
   - action: utter_robotUZ
   - action: utter_q5UZ
 
@@ -2363,14 +2177,18 @@ rules:
 - rule: soundlessly-RU howtogetalimit answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: howtogetalimit
+  - or:
+    - intent: howtogetalimit
+    - intent: howtogetalimitUZ
   - action: utter_getalimitRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ howtogetalimit answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: howtogetalimitUZ
+  - or:
+    - intent: howtogetalimit
+    - intent: howtogetalimitUZ
   - action: utter_getalimitUZ
   - action: utter_q5UZ
 
@@ -2378,14 +2196,18 @@ rules:
 - rule: soundlessly-RU cantloginapp answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: cantloginapp
+  - or:
+    - intent: cantloginapp
+    - intent: cantloginappUZ
   - action: utter_cantlogininappRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ cantloginapp answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: cantloginappUZ
+  - or:
+    - intent: cantloginapp
+    - intent: cantloginappUZ
   - action: utter_cantlogininappUZ
   - action: utter_q5UZ
 
@@ -2393,14 +2215,18 @@ rules:
 - rule: soundlessly-RU initialpayment answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: initialpayment
+  - or:
+    - intent: initialpayment
+    - intent: initialpaymentUZ
   - action: utter_initialpaymentRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ initialpayment answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: initialpaymentUZ
+  - or:
+    - intent: initialpayment
+    - intent: initialpaymentUZ
   - action: utter_initialpaymentUZ
   - action: utter_q5UZ
 
@@ -2408,14 +2234,18 @@ rules:
 - rule: soundlessly-RU cantpayontime answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: cantpayontime
+  - or:
+    - intent: cantpayontime
+    - intent: cantpayontimeUZ
   - action: utter_cantpayontimeRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ cantpayontime answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: cantpayontimeUZ
+  - or:
+    - intent: cantpayontime
+    - intent: cantpayontimeUZ
   - action: utter_cantpayontimeUZ
   - action: utter_q5UZ
 
@@ -2423,14 +2253,18 @@ rules:
 - rule: soundlessly-RU changecard answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: changecard
+  - or:
+    - intent: changecard
+    - intent: changecardUZ
   - action: utter_changingcardRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ changecard answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: changecardUZ
+  - or:
+    - intent: changecard
+    - intent: changecardUZ
   - action: utter_changingcardUZ
   - action: utter_q5UZ
 
@@ -2438,13 +2272,17 @@ rules:
 - rule: soundlessly-RU return answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: return
+  - or:
+    - intent: return
+    - intent: returnUZ
   - action: utter_q2RU
 
 - rule: soundlessly-UZ return answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: returnUZ
+  - or:
+    - intent: return
+    - intent: returnUZ
   - action: utter_q2UZ
 
 # -----
@@ -2454,7 +2292,7 @@ rules:
   - or:
     - intent: out_of_scope
     - intent: nlu_fallback
-  - action: utter_denyRU
+  - action: utter_silence2RU
   - action: action_restart_robot
 
 - rule: soundlessly-UZ soundlessly answer-UZ
@@ -2463,7 +2301,7 @@ rules:
   - or:
     - intent: out_of_scope
     - intent: nlu_fallback
-  - action: utter_denyUZ
+  - action: utter_silence2UZ
   - action: action_restart_robot
 
 # -----
@@ -2483,27 +2321,35 @@ rules:
 - rule: soundlessly-RU whenorderbedelivered answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: whenorderbedelivered
+  - or:
+    - intent: whenorderbedelivered
+    - intent: whenorderbedeliveredUZ
   - action: utter_q3RU
 
 - rule: soundlessly-UZ whenorderbedelivered answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: whenorderbedeliveredUZ
+  - or:
+    - intent: whenorderbedelivered
+    - intent: whenorderbedeliveredUZ
   - action: utter_q3UZ
 
 # -----
 - rule: soundlessly-RU foreignseller answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: foreignseller
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
   - action: utter_foreignsellerRU
   - action: utter_q5RU
 
 - rule: soundlessly-UZ foreignseller answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: foreignsellerUZ
+  - or:
+    - intent: foreignseller
+    - intent: foreignsellerUZ
   - action: utter_foreignsellerUZ
   - action: utter_q5UZ
 
@@ -2511,13 +2357,85 @@ rules:
 - rule: soundlessly-RU localseller answer-RU
   steps:
   - action: utter_soundlesslyRU
-  - intent: localseller
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
   - action: utter_localsellerRU
   - action: utter_q4RU
 
 - rule: soundlessly-UZ localseller answer-UZ
   steps:
   - action: utter_soundlesslyUZ
-  - intent: localsellerUZ
+  - or:
+    - intent: localseller
+    - intent: localsellerUZ
   - action: utter_localsellerUZ
   - action: utter_q4UZ
+
+# -----
+- rule: soundlessly-RU canthear answer-RU
+  steps:
+  - action: utter_soundlesslyRU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearRU
+
+- rule: soundlessly-UZ canthear answer-UZ
+  steps:
+  - action: utter_soundlesslyUZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+  - action: utter_canthearUZ
+
+# operator2
+- rule: operator2-RU
+  steps:
+  - action: utter_operator2RU
+  - action: action_restart_robot
+
+- rule: operator2-UZ
+  steps:
+  - action: utter_operator2UZ
+  - action: action_restart_robot
+
+# canthear
+- rule: canthear-RU affirm answer-RU
+  steps:
+  - action: utter_canthearRU
+  - or:
+    - intent: affirm
+    - intent: affirmUZ
+  - action: utter_q1RU
+
+- rule: canthear-UZ affirm answer-UZ
+  steps:
+  - action: utter_canthearUZ
+  - or:
+    - intent: affirm
+    - intent: affirmUZ
+  - action: utter_q1UZ
+
+# canthear
+- rule: canthear-RU deny answer-RU
+  steps:
+  - action: utter_canthearRU
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+    - intent: deny
+    - intent: denyUZ
+  - action: utter_silence2RU
+  - action: action_restart_robot
+
+- rule: canthear-UZ deny answer-UZ
+  steps:
+  - action: utter_canthearUZ
+  - or:
+    - intent: canthear
+    - intent: canthearUZ
+    - intent: deny
+    - intent: denyUZ
+  - action: utter_silence2UZ
+  - action: action_restart_robot

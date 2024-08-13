@@ -377,21 +377,25 @@ nlu:
 
 - intent: expresselivery
   examples: |
+    - экспресс
     - экспресс доставка
     - заказал через экспресс доставку
 
 - intent: expresseliveryUZ
   examples: |
+    - ekspress
     - ekspress yetkazib berish
     - ekspress etkazib berish orqali buyurtma qilingan
 
 - intent: standartdelivery
   examples: |
+    - стандарт
     - стандартная доставка
     - заказал через экспресс доставку
 
 - intent: standartdeliveryUZ
   examples: |
+    - standart
     - standart yetkazib berish
     - standart etkazib berish orqali buyurtma qilingan
 
@@ -404,6 +408,14 @@ nlu:
   examples: |
     - Zoodbox orqali yetkazib berish
     - Zoodbox
+
+- intent: canthear
+  examples: |
+    - не слышно вас
+
+- intent: canthearUZ
+  examples: |
+    - siz eshitmaysiz
 
 - intent: out_of_scope
   examples: |

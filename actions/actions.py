@@ -27,8 +27,44 @@ class ActionRepeat(Action):
             dispatcher.utter_message(response=response)
 
         return [ActionExecuted(response)]
+
+class ActionOperatorRU(Action):
+    def name(self) -> Text:
+        return "action_operatorRU"
     
-class ActionOperator(Action):
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        events = tracker.events
+        for event in events:
+            if event['event'] == 'action' and (event['action'] == 'utter_operatorRU' or event['action'] == 'utter_operatorUZ'):
+                response = 'utter_operator2RU'
+                dispatcher.utter_message(response=response)
+            else:
+                response = 'utter_operatorRU'
+                dispatcher.utter_message(response=response)
+        return [ActionExecuted(response)]
+
+class ActionOperatorUZ(Action):
+    def name(self) -> Text:
+        return "action_operatorUZ"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        events = tracker.events
+        for event in events:
+            if event['event'] == 'action' and (event['action'] == 'utter_operatorRU' or event['action'] == 'utter_operatorUZ'):
+                response = 'utter_operator2UZ'
+                dispatcher.utter_message(response=response)
+            else:
+                response = 'utter_operatorUZ'
+                dispatcher.utter_message(response=response)
+        return [ActionExecuted(response)]
+
+class ActionRestart(Action):
 
     def name(self) -> Text:
         return "action_restart_robot"
