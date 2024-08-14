@@ -126,12 +126,12 @@ responses:
   utter_operator2UZ:
   - text: 7.0 | Men tushundim, endi men sizni ushbu masala bilan shug'ullanadigan mutaxassis operator bilan bog'layman, iltimos, chiziqda qoling
 
-  utter_silenceRU:
-  - text: 8.0 | Извините, вы на линии?
-  - text: 8.1 | Говорите, я Вас слушаю
-  utter_silenceUZ:
-  - text: 9.0 | Kechirasiz, siz chiziqdasizmi?
-  - text: 9.1 | Gapiring, men sizni tinglayman
+  # utter_silenceRU:
+  # - text: 8.0 | Извините, вы на линии?
+  # - text: 8.1 | Говорите, я Вас слушаю
+  # utter_silenceUZ:
+  # - text: 9.0 | Kechirasiz, siz chiziqdasizmi?
+  # - text: 9.1 | Gapiring, men sizni tinglayman
 
   utter_findpoductRU:
   - text: 10.0 | Чтобы найти товар который вас интересует откройте приложение ZOOD и воспользуйтесь кнопкой поисковика или вы можете перейти в категории и найди нужный товар.
@@ -267,13 +267,6 @@ responses:
   - text: 62.0 | Уточните, пожалуйста, вы заказали от местного продавца или зарубежного?
   utter_q3UZ:
   - text: 63.0 | Iltimos, mahalliy sotuvchidan yoki chet eldan buyurtma berganingizni tekshiring?
-
-  utter_ask_country:
-    - text: 62.0 | Уточните, пожалуйста, вы заказали от местного продавца или зарубежного?
-  
-  utter_ask_countryUZ:
-  - text: 63.0 | Iltimos, mahalliy sotuvchidan yoki chet eldan buyurtma berganingizni tekshiring?
-
 
   utter_dontknowsellerRU:
   - text: 64.0 | Поняла вас. Давайте я расскажу про условия доставки. Если вы заказываете от местного продавца, доставка обычно занимает от 3 до 5 дней, максимум до 7 дней. Если же вы заказываете от зарубежного продавца, то время доставки может составить от 15 до 25 дней. Также нужно учесть, что суббота и воскресенье не являются рабочими днями.

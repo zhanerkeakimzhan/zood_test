@@ -766,18 +766,6 @@ rules:
     - intent: nlu_fallback
   - action: utter_soundlesslyUZ
 
-# -----
-- rule: q1-RU silence answer-RU
-  steps:
-  - action: utter_q1RU
-  - intent: silence
-  - action: utter_silenceRU
-
-- rule: q1-UZ silence answer-UZ
-  steps:
-  - action: utter_q1UZ
-  - intent: silence
-  - action: utter_silenceUZ
 
 # q2
 - rule: q2-RU receivedtheproduct
@@ -906,33 +894,25 @@ rules:
 - rule: q1-RU canthear answer-RU
   steps:
   - action: utter_q1RU
-  - or:
-    - intent: canthear
-    - intent: canthearUZ
+  - intent: canthear
   - action: utter_canthearRU
 
 - rule: q1-RU canthear answer-UZ
   steps:
   - action: utter_q1RU
-  - or:
-    - intent: canthear
-    - intent: canthearUZ  
+  - intent: canthearUZ  
   - action: utter_canthearUZ
 
 - rule: q1-UZ canthear answer-RU
   steps:
   - action: utter_q1UZ
-  - or:
-    - intent: canthear
-    - intent: canthearUZ
+  - intent: canthear
   - action: utter_canthearRU
 
 - rule: q1-UZ canthear answer-UZ
   steps:
   - action: utter_q1UZ
-  - or:
-    - intent: canthear
-    - intent: canthearUZ 
+  - intent: canthearUZ 
   - action: utter_canthearUZ
 
 # q3
@@ -1663,22 +1643,6 @@ rules:
     - intent: nlu_fallback
   - action: utter_soundlesslyUZ
 
-# -----
-- rule: q5-RU silence answer-RU
-  steps:
-  - action: utter_q5RU
-  - or:
-  - intent: silence
-  - action: utter_silenceRU
-
-- rule: q5-UZ silence answer-UZ
-  steps:
-  - action: utter_q5UZ
-  - or:
-  - intent: silence
-  - action: utter_silenceUZ
-
-
 # # # ----form
 # - rule: q5-RU whenorderbedelivered Activate form answer-RU
 #   steps:
@@ -2303,19 +2267,6 @@ rules:
     - intent: nlu_fallback
   - action: utter_silence2UZ
   - action: action_restart_robot
-
-# -----
-- rule: soundlessly-RU silence answer-RU
-  steps:
-  - action: utter_soundlesslyRU
-  - intent: silence
-  - action: utter_silenceRU
-
-- rule: soundlessly-UZ silence answer-UZ
-  steps:
-  - action: utter_soundlesslyUZ
-  - intent: silence
-  - action: utter_silenceUZ
 
 # -----
 - rule: soundlessly-RU whenorderbedelivered answer-RU

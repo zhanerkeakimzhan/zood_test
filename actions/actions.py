@@ -3,6 +3,7 @@ from rasa_sdk import Action, Tracker # type: ignore
 from rasa_sdk.executor import CollectingDispatcher # type: ignore
 from rasa_sdk.events import ActionExecuted, Restarted # type: ignore
 import random
+import logging
 
 class ActionRepeat(Action):
     def name(self) -> Text:
@@ -37,16 +38,28 @@ class ActionOperatorRU(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         events = tracker.events
-        for event in events:
-            if event['event'] == 'action' and (event['action'] == 'utter_operatorRU' or event['action'] == 'utter_operatorUZ'):
-                response = 'utter_operator2RU'
-                dispatcher.utter_message(response=response)
-            else:
-                response = 'utter_operatorRU'
-                dispatcher.utter_message(response=response)
+        action_names = [event.get('name') for event in events if event.get('event') == 'action']
+        print(f"Collected action_names: {action_names}")
+
+        has_operatorRU = False
+        has_operatorUZ = False
+
+        for action_name in action_names:
+            if action_name == 'action_operatorRU':
+                has_operatorRU = True
+            elif action_name == 'action_operatorUZ':
+                has_operatorUZ = True
+        
+        if has_operatorRU or has_operatorUZ:
+            response = 'utter_operator2RU'
+        else:
+            response = 'utter_operatorRU'
+
+        dispatcher.utter_message(response=response)
+
         return [ActionExecuted(response)]
 
-class ActionOperatorUZ(Action):
+class ActionOperatorRU(Action):
     def name(self) -> Text:
         return "action_operatorUZ"
     
@@ -55,13 +68,25 @@ class ActionOperatorUZ(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         events = tracker.events
-        for event in events:
-            if event['event'] == 'action' and (event['action'] == 'utter_operatorRU' or event['action'] == 'utter_operatorUZ'):
-                response = 'utter_operator2UZ'
-                dispatcher.utter_message(response=response)
-            else:
-                response = 'utter_operatorUZ'
-                dispatcher.utter_message(response=response)
+        action_names = [event.get('name') for event in events if event.get('event') == 'action']
+        print(f"Collected action_names: {action_names}")
+
+        has_operatorRU = False
+        has_operatorUZ = False
+
+        for action_name in action_names:
+            if action_name == 'action_operatorRU':
+                has_operatorRU = True
+            elif action_name == 'action_operatorUZ':
+                has_operatorUZ = True
+        
+        if has_operatorRU or has_operatorUZ:
+            response = 'utter_operator2UZ'
+        else:
+            response = 'utter_operatorUZ'
+
+        dispatcher.utter_message(response=response)
+
         return [ActionExecuted(response)]
 
 class ActionRestart(Action):

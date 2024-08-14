@@ -49,10 +49,6 @@ nlu:
   examples: |
     - yo'q
 
-- intent: silence
-  examples: |
-    - [silence](silence)
-
 - intent: operator
   examples: |
     - оператор
